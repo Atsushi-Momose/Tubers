@@ -1,0 +1,720 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		87661FA0E63AB9A8A87D35C3 /* Pods_TubersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0EF526D2B4A5A01871F6301 /* Pods_TubersUITests.framework */; };
+		AF1DEC02B65797BC6D31A95A /* Pods_TubersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9DC4B2F8A435A20B4712BB /* Pods_TubersTests.framework */; };
+		B91C7E56645CBA9448C96298 /* Pods_Tubers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE58787D42811A60D16CBADA /* Pods_Tubers.framework */; };
+		C4B1E0D021A816D900B94292 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1E0CF21A816D900B94292 /* AppDelegate.swift */; };
+		C4B1E0D221A816D900B94292 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1E0D121A816D900B94292 /* ViewController.swift */; };
+		C4B1E0D521A816D900B94292 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4B1E0D321A816D900B94292 /* Main.storyboard */; };
+		C4B1E0D721A816DA00B94292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4B1E0D621A816DA00B94292 /* Assets.xcassets */; };
+		C4B1E0DA21A816DA00B94292 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4B1E0D821A816DA00B94292 /* LaunchScreen.storyboard */; };
+		C4B1E0E521A816DB00B94292 /* TubersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1E0E421A816DB00B94292 /* TubersTests.swift */; };
+		C4B1E0F021A816DB00B94292 /* TubersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1E0EF21A816DB00B94292 /* TubersUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C4B1E0E121A816DB00B94292 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4B1E0C421A816D800B94292 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4B1E0CB21A816D800B94292;
+			remoteInfo = Tubers;
+		};
+		C4B1E0EC21A816DB00B94292 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4B1E0C421A816D800B94292 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4B1E0CB21A816D800B94292;
+			remoteInfo = Tubers;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0630E74F53D620EC37A0B099 /* Pods-TubersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubersTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TubersTests/Pods-TubersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		52362DF68AF545C6266403C5 /* Pods-TubersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubersUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TubersUITests/Pods-TubersUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		53D7A99AF37CDA453177C7D8 /* Pods-TubersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubersUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TubersUITests/Pods-TubersUITests.release.xcconfig"; sourceTree = "<group>"; };
+		60BAAC9C0D0064C13FC79DF0 /* Pods-Tubers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tubers.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tubers/Pods-Tubers.release.xcconfig"; sourceTree = "<group>"; };
+		862DC446D52A28B031243280 /* Pods-Tubers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tubers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tubers/Pods-Tubers.debug.xcconfig"; sourceTree = "<group>"; };
+		AE58787D42811A60D16CBADA /* Pods_Tubers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tubers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD9DC4B2F8A435A20B4712BB /* Pods_TubersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TubersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4B1E0CC21A816D800B94292 /* Tubers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tubers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4B1E0CF21A816D900B94292 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C4B1E0D121A816D900B94292 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C4B1E0D421A816D900B94292 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C4B1E0D621A816DA00B94292 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C4B1E0D921A816DA00B94292 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C4B1E0DB21A816DA00B94292 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4B1E0E021A816DB00B94292 /* TubersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TubersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4B1E0E421A816DB00B94292 /* TubersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubersTests.swift; sourceTree = "<group>"; };
+		C4B1E0E621A816DB00B94292 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4B1E0EB21A816DB00B94292 /* TubersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TubersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4B1E0EF21A816DB00B94292 /* TubersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubersUITests.swift; sourceTree = "<group>"; };
+		C4B1E0F121A816DB00B94292 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F022B890C554B0432F6FF12B /* Pods-TubersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubersTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TubersTests/Pods-TubersTests.release.xcconfig"; sourceTree = "<group>"; };
+		F0EF526D2B4A5A01871F6301 /* Pods_TubersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TubersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C4B1E0C921A816D800B94292 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B91C7E56645CBA9448C96298 /* Pods_Tubers.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4B1E0DD21A816DB00B94292 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF1DEC02B65797BC6D31A95A /* Pods_TubersTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4B1E0E821A816DB00B94292 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87661FA0E63AB9A8A87D35C3 /* Pods_TubersUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26B1444AD038A25F0D40AEB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE58787D42811A60D16CBADA /* Pods_Tubers.framework */,
+				BD9DC4B2F8A435A20B4712BB /* Pods_TubersTests.framework */,
+				F0EF526D2B4A5A01871F6301 /* Pods_TubersUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4B1E0C321A816D800B94292 = {
+			isa = PBXGroup;
+			children = (
+				C4B1E0CE21A816D800B94292 /* Tubers */,
+				C4B1E0E321A816DB00B94292 /* TubersTests */,
+				C4B1E0EE21A816DB00B94292 /* TubersUITests */,
+				C4B1E0CD21A816D800B94292 /* Products */,
+				FB342DA8348CB175036F758C /* Pods */,
+				26B1444AD038A25F0D40AEB3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C4B1E0CD21A816D800B94292 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4B1E0CC21A816D800B94292 /* Tubers.app */,
+				C4B1E0E021A816DB00B94292 /* TubersTests.xctest */,
+				C4B1E0EB21A816DB00B94292 /* TubersUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C4B1E0CE21A816D800B94292 /* Tubers */ = {
+			isa = PBXGroup;
+			children = (
+				C4B1E0CF21A816D900B94292 /* AppDelegate.swift */,
+				C4B1E0D121A816D900B94292 /* ViewController.swift */,
+				C4B1E0D321A816D900B94292 /* Main.storyboard */,
+				C4B1E0D621A816DA00B94292 /* Assets.xcassets */,
+				C4B1E0D821A816DA00B94292 /* LaunchScreen.storyboard */,
+				C4B1E0DB21A816DA00B94292 /* Info.plist */,
+			);
+			path = Tubers;
+			sourceTree = "<group>";
+		};
+		C4B1E0E321A816DB00B94292 /* TubersTests */ = {
+			isa = PBXGroup;
+			children = (
+				C4B1E0E421A816DB00B94292 /* TubersTests.swift */,
+				C4B1E0E621A816DB00B94292 /* Info.plist */,
+			);
+			path = TubersTests;
+			sourceTree = "<group>";
+		};
+		C4B1E0EE21A816DB00B94292 /* TubersUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C4B1E0EF21A816DB00B94292 /* TubersUITests.swift */,
+				C4B1E0F121A816DB00B94292 /* Info.plist */,
+			);
+			path = TubersUITests;
+			sourceTree = "<group>";
+		};
+		FB342DA8348CB175036F758C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				862DC446D52A28B031243280 /* Pods-Tubers.debug.xcconfig */,
+				60BAAC9C0D0064C13FC79DF0 /* Pods-Tubers.release.xcconfig */,
+				0630E74F53D620EC37A0B099 /* Pods-TubersTests.debug.xcconfig */,
+				F022B890C554B0432F6FF12B /* Pods-TubersTests.release.xcconfig */,
+				52362DF68AF545C6266403C5 /* Pods-TubersUITests.debug.xcconfig */,
+				53D7A99AF37CDA453177C7D8 /* Pods-TubersUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C4B1E0CB21A816D800B94292 /* Tubers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4B1E0F421A816DB00B94292 /* Build configuration list for PBXNativeTarget "Tubers" */;
+			buildPhases = (
+				108BCB5184C5D01BE4A4AB40 /* [CP] Check Pods Manifest.lock */,
+				C4B1E0C821A816D800B94292 /* Sources */,
+				C4B1E0C921A816D800B94292 /* Frameworks */,
+				C4B1E0CA21A816D800B94292 /* Resources */,
+				B87569C0CC0B0934BD597541 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tubers;
+			productName = Tubers;
+			productReference = C4B1E0CC21A816D800B94292 /* Tubers.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C4B1E0DF21A816DB00B94292 /* TubersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4B1E0F721A816DB00B94292 /* Build configuration list for PBXNativeTarget "TubersTests" */;
+			buildPhases = (
+				6FA4DF349F3D15F3E27A1DE0 /* [CP] Check Pods Manifest.lock */,
+				C4B1E0DC21A816DB00B94292 /* Sources */,
+				C4B1E0DD21A816DB00B94292 /* Frameworks */,
+				C4B1E0DE21A816DB00B94292 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4B1E0E221A816DB00B94292 /* PBXTargetDependency */,
+			);
+			name = TubersTests;
+			productName = TubersTests;
+			productReference = C4B1E0E021A816DB00B94292 /* TubersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C4B1E0EA21A816DB00B94292 /* TubersUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4B1E0FA21A816DB00B94292 /* Build configuration list for PBXNativeTarget "TubersUITests" */;
+			buildPhases = (
+				A6B4531C3ADEA14F772B0FC0 /* [CP] Check Pods Manifest.lock */,
+				C4B1E0E721A816DB00B94292 /* Sources */,
+				C4B1E0E821A816DB00B94292 /* Frameworks */,
+				C4B1E0E921A816DB00B94292 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4B1E0ED21A816DB00B94292 /* PBXTargetDependency */,
+			);
+			name = TubersUITests;
+			productName = TubersUITests;
+			productReference = C4B1E0EB21A816DB00B94292 /* TubersUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C4B1E0C421A816D800B94292 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = mmsc;
+				TargetAttributes = {
+					C4B1E0CB21A816D800B94292 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					C4B1E0DF21A816DB00B94292 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = C4B1E0CB21A816D800B94292;
+					};
+					C4B1E0EA21A816DB00B94292 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = C4B1E0CB21A816D800B94292;
+					};
+				};
+			};
+			buildConfigurationList = C4B1E0C721A816D800B94292 /* Build configuration list for PBXProject "Tubers" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C4B1E0C321A816D800B94292;
+			productRefGroup = C4B1E0CD21A816D800B94292 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C4B1E0CB21A816D800B94292 /* Tubers */,
+				C4B1E0DF21A816DB00B94292 /* TubersTests */,
+				C4B1E0EA21A816DB00B94292 /* TubersUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C4B1E0CA21A816D800B94292 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4B1E0DA21A816DA00B94292 /* LaunchScreen.storyboard in Resources */,
+				C4B1E0D721A816DA00B94292 /* Assets.xcassets in Resources */,
+				C4B1E0D521A816D900B94292 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4B1E0DE21A816DB00B94292 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4B1E0E921A816DB00B94292 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		108BCB5184C5D01BE4A4AB40 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tubers-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FA4DF349F3D15F3E27A1DE0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TubersTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6B4531C3ADEA14F772B0FC0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TubersUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B87569C0CC0B0934BD597541 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Tubers/Pods-Tubers-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tubers/Pods-Tubers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C4B1E0C821A816D800B94292 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4B1E0D221A816D900B94292 /* ViewController.swift in Sources */,
+				C4B1E0D021A816D900B94292 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4B1E0DC21A816DB00B94292 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4B1E0E521A816DB00B94292 /* TubersTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4B1E0E721A816DB00B94292 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4B1E0F021A816DB00B94292 /* TubersUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C4B1E0E221A816DB00B94292 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4B1E0CB21A816D800B94292 /* Tubers */;
+			targetProxy = C4B1E0E121A816DB00B94292 /* PBXContainerItemProxy */;
+		};
+		C4B1E0ED21A816DB00B94292 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4B1E0CB21A816D800B94292 /* Tubers */;
+			targetProxy = C4B1E0EC21A816DB00B94292 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C4B1E0D321A816D900B94292 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4B1E0D421A816D900B94292 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C4B1E0D821A816DA00B94292 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4B1E0D921A816DA00B94292 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C4B1E0F221A816DB00B94292 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C4B1E0F321A816DB00B94292 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C4B1E0F521A816DB00B94292 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 862DC446D52A28B031243280 /* Pods-Tubers.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7PTVQRPRL6;
+				INFOPLIST_FILE = Tubers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mmsc.Tubers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C4B1E0F621A816DB00B94292 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60BAAC9C0D0064C13FC79DF0 /* Pods-Tubers.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7PTVQRPRL6;
+				INFOPLIST_FILE = Tubers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mmsc.Tubers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		C4B1E0F821A816DB00B94292 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0630E74F53D620EC37A0B099 /* Pods-TubersTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7PTVQRPRL6;
+				INFOPLIST_FILE = TubersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mmsc.TubersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tubers.app/Tubers";
+			};
+			name = Debug;
+		};
+		C4B1E0F921A816DB00B94292 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F022B890C554B0432F6FF12B /* Pods-TubersTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7PTVQRPRL6;
+				INFOPLIST_FILE = TubersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mmsc.TubersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tubers.app/Tubers";
+			};
+			name = Release;
+		};
+		C4B1E0FB21A816DB00B94292 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52362DF68AF545C6266403C5 /* Pods-TubersUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7PTVQRPRL6;
+				INFOPLIST_FILE = TubersUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mmsc.TubersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Tubers;
+			};
+			name = Debug;
+		};
+		C4B1E0FC21A816DB00B94292 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53D7A99AF37CDA453177C7D8 /* Pods-TubersUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7PTVQRPRL6;
+				INFOPLIST_FILE = TubersUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mmsc.TubersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Tubers;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C4B1E0C721A816D800B94292 /* Build configuration list for PBXProject "Tubers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4B1E0F221A816DB00B94292 /* Debug */,
+				C4B1E0F321A816DB00B94292 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4B1E0F421A816DB00B94292 /* Build configuration list for PBXNativeTarget "Tubers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4B1E0F521A816DB00B94292 /* Debug */,
+				C4B1E0F621A816DB00B94292 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4B1E0F721A816DB00B94292 /* Build configuration list for PBXNativeTarget "TubersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4B1E0F821A816DB00B94292 /* Debug */,
+				C4B1E0F921A816DB00B94292 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4B1E0FA21A816DB00B94292 /* Build configuration list for PBXNativeTarget "TubersUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4B1E0FB21A816DB00B94292 /* Debug */,
+				C4B1E0FC21A816DB00B94292 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C4B1E0C421A816D800B94292 /* Project object */;
+}

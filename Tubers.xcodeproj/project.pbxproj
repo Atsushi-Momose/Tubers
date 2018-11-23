@@ -20,6 +20,9 @@
 		C4F5F63121A82251003ECD04 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5F63021A82251003ECD04 /* FirstViewController.swift */; };
 		C4F5F63321A823E0003ECD04 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5F63221A823E0003ECD04 /* SecondViewController.swift */; };
 		C4F5F63521A8243E003ECD04 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5F63421A8243E003ECD04 /* ThirdViewController.swift */; };
+		C4F5F63821A83431003ECD04 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5F63721A83431003ECD04 /* APIManager.swift */; };
+		C4F5F63B21A83597003ECD04 /* YouTubeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5F63A21A83597003ECD04 /* YouTubeList.swift */; };
+		C4F5F63D21A83794003ECD04 /* UrlList.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4F5F63C21A83794003ECD04 /* UrlList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		C4F5F63021A82251003ECD04 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		C4F5F63221A823E0003ECD04 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		C4F5F63421A8243E003ECD04 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		C4F5F63721A83431003ECD04 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		C4F5F63A21A83597003ECD04 /* YouTubeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeList.swift; sourceTree = "<group>"; };
+		C4F5F63C21A83794003ECD04 /* UrlList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UrlList.plist; sourceTree = "<group>"; };
 		F022B890C554B0432F6FF12B /* Pods-TubersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubersTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TubersTests/Pods-TubersTests.release.xcconfig"; sourceTree = "<group>"; };
 		F0EF526D2B4A5A01871F6301 /* Pods_TubersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TubersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -109,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				C4B1E0CE21A816D800B94292 /* Tubers */,
+				C4F5F63921A83566003ECD04 /* Lists */,
+				C4F5F63621A8337C003ECD04 /* APIService */,
 				C4B1E0E321A816DB00B94292 /* TubersTests */,
 				C4B1E0EE21A816DB00B94292 /* TubersUITests */,
 				C4B1E0CD21A816D800B94292 /* Products */,
@@ -139,6 +147,7 @@
 				C4B1E0D621A816DA00B94292 /* Assets.xcassets */,
 				C4B1E0D821A816DA00B94292 /* LaunchScreen.storyboard */,
 				C4B1E0DB21A816DA00B94292 /* Info.plist */,
+				C4F5F63C21A83794003ECD04 /* UrlList.plist */,
 			);
 			path = Tubers;
 			sourceTree = "<group>";
@@ -159,6 +168,22 @@
 				C4B1E0F121A816DB00B94292 /* Info.plist */,
 			);
 			path = TubersUITests;
+			sourceTree = "<group>";
+		};
+		C4F5F63621A8337C003ECD04 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				C4F5F63721A83431003ECD04 /* APIManager.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		C4F5F63921A83566003ECD04 /* Lists */ = {
+			isa = PBXGroup;
+			children = (
+				C4F5F63A21A83597003ECD04 /* YouTubeList.swift */,
+			);
+			path = Lists;
 			sourceTree = "<group>";
 		};
 		FB342DA8348CB175036F758C /* Pods */ = {
@@ -284,6 +309,7 @@
 			files = (
 				C4B1E0DA21A816DA00B94292 /* LaunchScreen.storyboard in Resources */,
 				C4B1E0D721A816DA00B94292 /* Assets.xcassets in Resources */,
+				C4F5F63D21A83794003ECD04 /* UrlList.plist in Resources */,
 				C4B1E0D521A816D900B94292 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,7 +414,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4F5F63821A83431003ECD04 /* APIManager.swift in Sources */,
 				C4F5F63321A823E0003ECD04 /* SecondViewController.swift in Sources */,
+				C4F5F63B21A83597003ECD04 /* YouTubeList.swift in Sources */,
 				C4F5F63121A82251003ECD04 /* FirstViewController.swift in Sources */,
 				C4F5F63521A8243E003ECD04 /* ThirdViewController.swift in Sources */,
 				C4B1E0D221A816D900B94292 /* MainViewController.swift in Sources */,

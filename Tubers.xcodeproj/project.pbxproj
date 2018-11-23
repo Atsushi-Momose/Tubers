@@ -17,6 +17,9 @@
 		C4B1E0DA21A816DA00B94292 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4B1E0D821A816DA00B94292 /* LaunchScreen.storyboard */; };
 		C4B1E0E521A816DB00B94292 /* TubersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1E0E421A816DB00B94292 /* TubersTests.swift */; };
 		C4B1E0F021A816DB00B94292 /* TubersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1E0EF21A816DB00B94292 /* TubersUITests.swift */; };
+		C4F5F63121A82251003ECD04 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5F63021A82251003ECD04 /* FirstViewController.swift */; };
+		C4F5F63321A823E0003ECD04 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5F63221A823E0003ECD04 /* SecondViewController.swift */; };
+		C4F5F63521A8243E003ECD04 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5F63421A8243E003ECD04 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		C4B1E0EB21A816DB00B94292 /* TubersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TubersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4B1E0EF21A816DB00B94292 /* TubersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubersUITests.swift; sourceTree = "<group>"; };
 		C4B1E0F121A816DB00B94292 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4F5F63021A82251003ECD04 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		C4F5F63221A823E0003ECD04 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		C4F5F63421A8243E003ECD04 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		F022B890C554B0432F6FF12B /* Pods-TubersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubersTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TubersTests/Pods-TubersTests.release.xcconfig"; sourceTree = "<group>"; };
 		F0EF526D2B4A5A01871F6301 /* Pods_TubersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TubersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -126,6 +132,9 @@
 			children = (
 				C4B1E0CF21A816D900B94292 /* AppDelegate.swift */,
 				C4B1E0D121A816D900B94292 /* MainViewController.swift */,
+				C4F5F63021A82251003ECD04 /* FirstViewController.swift */,
+				C4F5F63221A823E0003ECD04 /* SecondViewController.swift */,
+				C4F5F63421A8243E003ECD04 /* ThirdViewController.swift */,
 				C4B1E0D321A816D900B94292 /* Main.storyboard */,
 				C4B1E0D621A816DA00B94292 /* Assets.xcassets */,
 				C4B1E0D821A816DA00B94292 /* LaunchScreen.storyboard */,
@@ -379,6 +388,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4F5F63321A823E0003ECD04 /* SecondViewController.swift in Sources */,
+				C4F5F63121A82251003ECD04 /* FirstViewController.swift in Sources */,
+				C4F5F63521A8243E003ECD04 /* ThirdViewController.swift in Sources */,
 				C4B1E0D221A816D900B94292 /* MainViewController.swift in Sources */,
 				C4B1E0D021A816D900B94292 /* AppDelegate.swift in Sources */,
 			);

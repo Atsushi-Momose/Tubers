@@ -11,13 +11,9 @@ import Alamofire
 
 class APIManager: NSObject {
     
-    private var youtubeNextPageToken: String?
+    var youtubeNextPageToken: String?
     
     func ConnectionAPI(url: String, success: @escaping (_ result: NSArray) -> Void, failure: @escaping (Error?) -> Void) {
-
-//        let filePath = Bundle.main.path(forResource: "UrlList", ofType:"plist" )
-//        let plist = NSDictionary(contentsOfFile: filePath!)
-//        guard let url = plist!["youTubeListUrl"] as! String? else { return }
         
         Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: [:])
             

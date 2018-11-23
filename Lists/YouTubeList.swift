@@ -16,7 +16,12 @@ class YouTubeList: NSObject {
         let plist = NSDictionary(contentsOfFile: filePath!)
         guard let url = plist!["youTubeListUrl"] as! String? else { return }
         
-        APIManager().ConnectionAPI(url: url, success: {(result: NSArray) -> Void in
+        let apiManager = APIManager()
+        
+        apiManager.ConnectionAPI(url: url, success: {(result: NSArray) -> Void in
+  
+        
+            
             
         }, failure: {(result: Error?) -> Void in
             

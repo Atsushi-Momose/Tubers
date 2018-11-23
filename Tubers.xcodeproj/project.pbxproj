@@ -17,12 +17,13 @@
 		C4B1E0DA21A816DA00B94292 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4B1E0D821A816DA00B94292 /* LaunchScreen.storyboard */; };
 		C4B1E0E521A816DB00B94292 /* TubersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1E0E421A816DB00B94292 /* TubersTests.swift */; };
 		C4B1E0F021A816DB00B94292 /* TubersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1E0EF21A816DB00B94292 /* TubersUITests.swift */; };
+		C4C034B821A865CB0026945B /* TubersKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = C4C034B721A865CB0026945B /* TubersKeys.h */; };
+		C4C034BB21A867B60026945B /* ProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C034BA21A867B60026945B /* ProgressStyle.swift */; };
 		C4F5F63121A82251003ECD04 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5F63021A82251003ECD04 /* FirstViewController.swift */; };
 		C4F5F63321A823E0003ECD04 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5F63221A823E0003ECD04 /* SecondViewController.swift */; };
 		C4F5F63521A8243E003ECD04 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5F63421A8243E003ECD04 /* ThirdViewController.swift */; };
 		C4F5F63821A83431003ECD04 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5F63721A83431003ECD04 /* APIManager.swift */; };
 		C4F5F63B21A83597003ECD04 /* YouTubeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F5F63A21A83597003ECD04 /* YouTubeList.swift */; };
-		C4F5F63D21A83794003ECD04 /* UrlList.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4F5F63C21A83794003ECD04 /* UrlList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,12 +64,14 @@
 		C4B1E0EB21A816DB00B94292 /* TubersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TubersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4B1E0EF21A816DB00B94292 /* TubersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TubersUITests.swift; sourceTree = "<group>"; };
 		C4B1E0F121A816DB00B94292 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4C034B021A85CA80026945B /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		C4C034B721A865CB0026945B /* TubersKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TubersKeys.h; path = Pods/CocoaPodsKeys/TubersKeys.h; sourceTree = "<group>"; };
+		C4C034BA21A867B60026945B /* ProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStyle.swift; sourceTree = "<group>"; };
 		C4F5F63021A82251003ECD04 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		C4F5F63221A823E0003ECD04 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		C4F5F63421A8243E003ECD04 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		C4F5F63721A83431003ECD04 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		C4F5F63A21A83597003ECD04 /* YouTubeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeList.swift; sourceTree = "<group>"; };
-		C4F5F63C21A83794003ECD04 /* UrlList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UrlList.plist; sourceTree = "<group>"; };
 		F022B890C554B0432F6FF12B /* Pods-TubersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubersTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TubersTests/Pods-TubersTests.release.xcconfig"; sourceTree = "<group>"; };
 		F0EF526D2B4A5A01871F6301 /* Pods_TubersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TubersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -104,6 +107,7 @@
 		26B1444AD038A25F0D40AEB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C4C034B021A85CA80026945B /* Bridging-Header.h */,
 				AE58787D42811A60D16CBADA /* Pods_Tubers.framework */,
 				BD9DC4B2F8A435A20B4712BB /* Pods_TubersTests.framework */,
 				F0EF526D2B4A5A01871F6301 /* Pods_TubersUITests.framework */,
@@ -114,7 +118,9 @@
 		C4B1E0C321A816D800B94292 = {
 			isa = PBXGroup;
 			children = (
+				C4C034B721A865CB0026945B /* TubersKeys.h */,
 				C4B1E0CE21A816D800B94292 /* Tubers */,
+				C4C034B921A8678F0026945B /* Utility */,
 				C4F5F63921A83566003ECD04 /* Lists */,
 				C4F5F63621A8337C003ECD04 /* APIService */,
 				C4B1E0E321A816DB00B94292 /* TubersTests */,
@@ -147,7 +153,6 @@
 				C4B1E0D621A816DA00B94292 /* Assets.xcassets */,
 				C4B1E0D821A816DA00B94292 /* LaunchScreen.storyboard */,
 				C4B1E0DB21A816DA00B94292 /* Info.plist */,
-				C4F5F63C21A83794003ECD04 /* UrlList.plist */,
 			);
 			path = Tubers;
 			sourceTree = "<group>";
@@ -168,6 +173,14 @@
 				C4B1E0F121A816DB00B94292 /* Info.plist */,
 			);
 			path = TubersUITests;
+			sourceTree = "<group>";
+		};
+		C4C034B921A8678F0026945B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C4C034BA21A867B60026945B /* ProgressStyle.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		C4F5F63621A8337C003ECD04 /* APIService */ = {
@@ -201,6 +214,17 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		C4C034B121A862D50026945B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4C034B821A865CB0026945B /* TubersKeys.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		C4B1E0CB21A816D800B94292 /* Tubers */ = {
 			isa = PBXNativeTarget;
@@ -211,6 +235,7 @@
 				C4B1E0C921A816D800B94292 /* Frameworks */,
 				C4B1E0CA21A816D800B94292 /* Resources */,
 				B87569C0CC0B0934BD597541 /* [CP] Embed Pods Frameworks */,
+				C4C034B121A862D50026945B /* Headers */,
 			);
 			buildRules = (
 			);
@@ -309,7 +334,6 @@
 			files = (
 				C4B1E0DA21A816DA00B94292 /* LaunchScreen.storyboard in Resources */,
 				C4B1E0D721A816DA00B94292 /* Assets.xcassets in Resources */,
-				C4F5F63D21A83794003ECD04 /* UrlList.plist in Resources */,
 				C4B1E0D521A816D900B94292 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,12 +417,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Tubers/Pods-Tubers-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GradientCircularProgress/GradientCircularProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/Keys/Keys.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GradientCircularProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Keys.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
@@ -418,6 +446,7 @@
 				C4F5F63321A823E0003ECD04 /* SecondViewController.swift in Sources */,
 				C4F5F63B21A83597003ECD04 /* YouTubeList.swift in Sources */,
 				C4F5F63121A82251003ECD04 /* FirstViewController.swift in Sources */,
+				C4C034BB21A867B60026945B /* ProgressStyle.swift in Sources */,
 				C4F5F63521A8243E003ECD04 /* ThirdViewController.swift in Sources */,
 				C4B1E0D221A816D900B94292 /* MainViewController.swift in Sources */,
 				C4B1E0D021A816D900B94292 /* AppDelegate.swift in Sources */,
@@ -531,6 +560,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUCT)/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -584,6 +614,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUCT)/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};

@@ -8,14 +8,21 @@
 
 import Foundation
 import XLPagerTabStrip
+import GradientCircularProgress
 
 class FirstViewController: UIViewController, IndicatorInfoProvider {
     
     //ここがボタンのタイトルに利用されます
     var itemInfo: IndicatorInfo = "First"
-    
+
+    // インジケーター
+    let progress = GradientCircularProgress()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let progressView = progress.show(frame: self.view.frame, message: "Loading...", style: ProgressStyle())
+        view.addSubview(progressView!)
     }
     
     //必須

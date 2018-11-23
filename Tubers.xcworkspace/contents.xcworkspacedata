@@ -5,6 +5,9 @@
       location = "group:Tubers.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Bridging-Header.h">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

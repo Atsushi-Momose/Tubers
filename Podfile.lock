@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.7.3)
+  - GradientCircularProgress (3.10.1)
+  - Keys (1.0.1)
   - PromiseKit (6.5.3):
     - PromiseKit/CorePromise (= 6.5.3)
     - PromiseKit/Foundation (= 6.5.3)
@@ -13,6 +15,8 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - GradientCircularProgress (from `https://github.com/keygx/GradientCircularProgress`)
+  - Keys (from `Pods/CocoaPodsKeys`)
   - PromiseKit
   - XLPagerTabStrip
 
@@ -22,11 +26,24 @@ SPEC REPOS:
     - PromiseKit
     - XLPagerTabStrip
 
+EXTERNAL SOURCES:
+  GradientCircularProgress:
+    :git: https://github.com/keygx/GradientCircularProgress
+  Keys:
+    :path: Pods/CocoaPodsKeys
+
+CHECKOUT OPTIONS:
+  GradientCircularProgress:
+    :commit: 29abd46666f370255ae859717e82f907acf21cb4
+    :git: https://github.com/keygx/GradientCircularProgress
+
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  GradientCircularProgress: 7f3638d14b34b8181888d3a96e6bc045b6c0c184
+  Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
   PromiseKit: c609029bdd801f792551a504c695c7d3098b42cd
   XLPagerTabStrip: 22d4c58200d7c105e0e407ab6bfd01a5d85014be
 
-PODFILE CHECKSUM: b5547a49bd116bf80a15f8e603bf14ebb1c325f1
+PODFILE CHECKSUM: c8b3622b7b9c84adab770caeaec9578eaf9996e5
 
 COCOAPODS: 1.5.3

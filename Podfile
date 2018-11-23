@@ -7,6 +7,7 @@ target 'Tubers' do
    pod "Alamofire"
    pod "PromiseKit"
    pod "XLPagerTabStrip"
+   pod 'GradientCircularProgress', :git => 'https://github.com/keygx/GradientCircularProgress'
 
   # Pods for Tubers
 
@@ -19,5 +20,11 @@ target 'Tubers' do
     inherit! :search_paths
     # Pods for testing
   end
+
+plugin 'cocoapods-keys', {
+  :project => "Tubers",
+  :keys => [
+    "youtubeAPIKey"
+  ]}
 
 end

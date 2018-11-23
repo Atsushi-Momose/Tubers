@@ -7,21 +7,16 @@
 //
 
 import Foundation
+import Pods_Tubers
 
 class YouTubeList: NSObject {
     
     func loadYouTubeList() {
         
-        let filePath = Bundle.main.path(forResource: "UrlList", ofType:"plist" )
-        let plist = NSDictionary(contentsOfFile: filePath!)
-        guard let url = plist!["youTubeListUrl"] as! String? else { return }
-        
         let apiManager = APIManager()
-        
-        apiManager.ConnectionAPI(url: url, success: {(result: NSArray) -> Void in
+
+        apiManager.ConnectionAPI(url: TubersKeys().youtubeAPIKey, success: {(result: NSArray) -> Void in
   
-        
-            
             
         }, failure: {(result: Error?) -> Void in
             

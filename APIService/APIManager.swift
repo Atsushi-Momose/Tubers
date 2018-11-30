@@ -24,11 +24,12 @@ class APIManager: NSObject {
                     do {
                         guard let data = response.data else { return }
                         
-                        let jsonResult = try JSONSerialization.jsonObject(with: data) as! NSMutableDictionary
-
+                        let jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSMutableDictionary
+                        
                         self.youtubeNextPageToken = jsonResult["nextPageToken"] as! String?
+
                         let ary = jsonResult["items"] as! NSArray
-                        //let youtubeList = YouTubeList(ary: ary)
+                        
                         success(ary)
                     }
                     catch {

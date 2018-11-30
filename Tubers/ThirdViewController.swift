@@ -13,10 +13,16 @@ class ThirdViewController: UIViewController, IndicatorInfoProvider {
     
     //ここがボタンのタイトルに利用されます
     var itemInfo: IndicatorInfo = "Third"
+    let youTube = YouTubeList()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        youTube.loadYouTubeList()
     }
+    
+    
+    
     
     //必須
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {

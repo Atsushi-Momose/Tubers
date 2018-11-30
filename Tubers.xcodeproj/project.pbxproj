@@ -10,6 +10,7 @@
 		87661FA0E63AB9A8A87D35C3 /* Pods_TubersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0EF526D2B4A5A01871F6301 /* Pods_TubersUITests.framework */; };
 		AF1DEC02B65797BC6D31A95A /* Pods_TubersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9DC4B2F8A435A20B4712BB /* Pods_TubersTests.framework */; };
 		B91C7E56645CBA9448C96298 /* Pods_Tubers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE58787D42811A60D16CBADA /* Pods_Tubers.framework */; };
+		C4894AC721B1791E00DCE9E9 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4894AC621B1791D00DCE9E9 /* R.generated.swift */; };
 		C4B1E0D021A816D900B94292 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1E0CF21A816D900B94292 /* AppDelegate.swift */; };
 		C4B1E0D221A816D900B94292 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1E0D121A816D900B94292 /* MainViewController.swift */; };
 		C4B1E0D521A816D900B94292 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4B1E0D321A816D900B94292 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		862DC446D52A28B031243280 /* Pods-Tubers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tubers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tubers/Pods-Tubers.debug.xcconfig"; sourceTree = "<group>"; };
 		AE58787D42811A60D16CBADA /* Pods_Tubers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tubers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9DC4B2F8A435A20B4712BB /* Pods_TubersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TubersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4894AC621B1791D00DCE9E9 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		C4B1E0CC21A816D800B94292 /* Tubers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tubers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4B1E0CF21A816D900B94292 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4B1E0D121A816D900B94292 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		C4B1E0CE21A816D800B94292 /* Tubers */ = {
 			isa = PBXGroup;
 			children = (
+				C4894AC621B1791D00DCE9E9 /* R.generated.swift */,
 				C4B1E0CF21A816D900B94292 /* AppDelegate.swift */,
 				C4B1E0D121A816D900B94292 /* MainViewController.swift */,
 				C4F5F63021A82251003ECD04 /* FirstViewController.swift */,
@@ -231,6 +234,7 @@
 			buildConfigurationList = C4B1E0F421A816DB00B94292 /* Build configuration list for PBXNativeTarget "Tubers" */;
 			buildPhases = (
 				108BCB5184C5D01BE4A4AB40 /* [CP] Check Pods Manifest.lock */,
+				C4894AC521B1785200DCE9E9 /* ShellScript */,
 				C4B1E0C821A816D800B94292 /* Sources */,
 				C4B1E0C921A816D800B94292 /* Frameworks */,
 				C4B1E0CA21A816D800B94292 /* Resources */,
@@ -420,6 +424,7 @@
 				"${BUILT_PRODUCTS_DIR}/GradientCircularProgress/GradientCircularProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/Keys/Keys.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -428,12 +433,26 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GradientCircularProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Keys.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tubers/Pods-Tubers-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		C4894AC521B1785200DCE9E9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -444,6 +463,7 @@
 			files = (
 				C4F5F63821A83431003ECD04 /* APIManager.swift in Sources */,
 				C4F5F63321A823E0003ECD04 /* SecondViewController.swift in Sources */,
+				C4894AC721B1791E00DCE9E9 /* R.generated.swift in Sources */,
 				C4F5F63B21A83597003ECD04 /* YouTubeList.swift in Sources */,
 				C4F5F63121A82251003ECD04 /* FirstViewController.swift in Sources */,
 				C4C034BB21A867B60026945B /* ProgressStyle.swift in Sources */,

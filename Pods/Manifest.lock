@@ -11,6 +11,9 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.5.3):
     - PromiseKit/CorePromise
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
   - XLPagerTabStrip (8.1.0)
 
 DEPENDENCIES:
@@ -18,12 +21,15 @@ DEPENDENCIES:
   - GradientCircularProgress (from `https://github.com/keygx/GradientCircularProgress`)
   - Keys (from `Pods/CocoaPodsKeys`)
   - PromiseKit
+  - R.swift
   - XLPagerTabStrip
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - PromiseKit
+    - R.swift
+    - R.swift.Library
     - XLPagerTabStrip
 
 EXTERNAL SOURCES:
@@ -42,8 +48,10 @@ SPEC CHECKSUMS:
   GradientCircularProgress: 7f3638d14b34b8181888d3a96e6bc045b6c0c184
   Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
   PromiseKit: c609029bdd801f792551a504c695c7d3098b42cd
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   XLPagerTabStrip: 22d4c58200d7c105e0e407ab6bfd01a5d85014be
 
-PODFILE CHECKSUM: c8b3622b7b9c84adab770caeaec9578eaf9996e5
+PODFILE CHECKSUM: 095100cd32f94eb12b55f371c11984119dca79b8
 
 COCOAPODS: 1.5.3

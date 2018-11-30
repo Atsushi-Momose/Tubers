@@ -7,6 +7,7 @@ target 'Tubers' do
    pod "Alamofire"
    pod "PromiseKit"
    pod "XLPagerTabStrip"
+   pod 'R.swift'
    pod 'GradientCircularProgress', :git => 'https://github.com/keygx/GradientCircularProgress'
 
   # Pods for Tubers

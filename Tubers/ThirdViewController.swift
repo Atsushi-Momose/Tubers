@@ -12,7 +12,7 @@ import XLPagerTabStrip
 class ThirdViewController: UIViewController, IndicatorInfoProvider {
     
     //ここがボタンのタイトルに利用されます
-    var itemInfo: IndicatorInfo = "Second"
+    var itemInfo: IndicatorInfo = "Third"
     
     override func viewDidLoad() {
         super.viewDidLoad()

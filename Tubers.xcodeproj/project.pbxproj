@@ -11,7 +11,7 @@
 		AF1DEC02B65797BC6D31A95A /* Pods_TubersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9DC4B2F8A435A20B4712BB /* Pods_TubersTests.framework */; };
 		B91C7E56645CBA9448C96298 /* Pods_Tubers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE58787D42811A60D16CBADA /* Pods_Tubers.framework */; };
 		C4894AC721B1791E00DCE9E9 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4894AC621B1791D00DCE9E9 /* R.generated.swift */; };
-		C4894ACE21B1897E00DCE9E9 /* YouTubeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4894ACD21B1897E00DCE9E9 /* YouTubeModels.swift */; };
+		C4894ACE21B1897E00DCE9E9 /* YouTubeListDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4894ACD21B1897E00DCE9E9 /* YouTubeListDecoder.swift */; };
 		C4B1E0D021A816D900B94292 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1E0CF21A816D900B94292 /* AppDelegate.swift */; };
 		C4B1E0D221A816D900B94292 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1E0D121A816D900B94292 /* MainViewController.swift */; };
 		C4B1E0D521A816D900B94292 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4B1E0D321A816D900B94292 /* Main.storyboard */; };
@@ -54,7 +54,7 @@
 		AE58787D42811A60D16CBADA /* Pods_Tubers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tubers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9DC4B2F8A435A20B4712BB /* Pods_TubersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TubersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4894AC621B1791D00DCE9E9 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
-		C4894ACD21B1897E00DCE9E9 /* YouTubeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeModels.swift; sourceTree = "<group>"; };
+		C4894ACD21B1897E00DCE9E9 /* YouTubeListDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeListDecoder.swift; sourceTree = "<group>"; };
 		C4B1E0CC21A816D800B94292 /* Tubers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tubers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4B1E0CF21A816D900B94292 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4B1E0D121A816D900B94292 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -119,12 +119,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C4894ACB21B1893A00DCE9E9 /* Models */ = {
+		C4894ACB21B1893A00DCE9E9 /* Decoder */ = {
 			isa = PBXGroup;
 			children = (
-				C4894ACD21B1897E00DCE9E9 /* YouTubeModels.swift */,
+				C4894ACD21B1897E00DCE9E9 /* YouTubeListDecoder.swift */,
 			);
-			path = Models;
+			path = Decoder;
 			sourceTree = "<group>";
 		};
 		C4B1E0C321A816D800B94292 = {
@@ -134,7 +134,7 @@
 				C4B1E0CE21A816D800B94292 /* Tubers */,
 				C4C034B921A8678F0026945B /* Utility */,
 				C4F5F63921A83566003ECD04 /* Lists */,
-				C4894ACB21B1893A00DCE9E9 /* Models */,
+				C4894ACB21B1893A00DCE9E9 /* Decoder */,
 				C4F5F63621A8337C003ECD04 /* APIService */,
 				C4B1E0E321A816DB00B94292 /* TubersTests */,
 				C4B1E0EE21A816DB00B94292 /* TubersUITests */,
@@ -473,7 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4F5F63821A83431003ECD04 /* APIManager.swift in Sources */,
-				C4894ACE21B1897E00DCE9E9 /* YouTubeModels.swift in Sources */,
+				C4894ACE21B1897E00DCE9E9 /* YouTubeListDecoder.swift in Sources */,
 				C4F5F63321A823E0003ECD04 /* SecondViewController.swift in Sources */,
 				C4894AC721B1791E00DCE9E9 /* R.generated.swift in Sources */,
 				C4F5F63B21A83597003ECD04 /* YouTubeList.swift in Sources */,

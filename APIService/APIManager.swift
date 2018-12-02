@@ -11,9 +11,7 @@ import Alamofire
 
 class APIManager: NSObject {
     
-    var youtubeNextPageToken: String?
-    
-    func ConnectionAPI(url: String, success: @escaping (_ result: NSArray) -> Void, failure: @escaping (Error?) -> Void) {
+    func ConnectionAPI(url: String, success: @escaping (_ result: Data) -> Void, failure: @escaping (Error?) -> Void) {
         
         Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: [:])
             
@@ -21,20 +19,18 @@ class APIManager: NSObject {
             .responseJSON { response in
                 switch response.result {
                 case .success(_):
-                    do {
+                    //do {
                         guard let data = response.data else { return }
                         
-                        let jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSMutableDictionary
+//                        let jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSMutableDictionary
+//
+//                        let ary = jsonResult["items"] as! NSArray
                         
-                        self.youtubeNextPageToken = jsonResult["nextPageToken"] as! String?
-
-                        let ary = jsonResult["items"] as! NSArray
-                        
-                        success(ary)
-                    }
-                    catch {
-                        failure(response.error)
-                    }
+                        success(data)
+//                    }
+//                    catch {
+//                        failure(response.error)
+//                    }
                 case .failure(_):
                     failure(response.error!)
                 }

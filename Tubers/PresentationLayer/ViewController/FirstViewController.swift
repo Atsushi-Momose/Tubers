@@ -12,9 +12,10 @@ import GradientCircularProgress
 
 class FirstViewController: UIViewController, IndicatorInfoProvider {
     
-    //ここがボタンのタイトルに利用されます
+    let presenter = FirstViewPresenter()
+    
+    // ボタンタイトル
     var itemInfo: IndicatorInfo = "First"
-
     // インジケーター
     let progress = GradientCircularProgress()
 
@@ -23,6 +24,13 @@ class FirstViewController: UIViewController, IndicatorInfoProvider {
         
         let progressView = progress.show(frame: self.view.frame, message: "Loading...", style: ProgressStyle())
         view.addSubview(progressView!)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Youtube一覧取得
+        presenter.getYoutubeList()
     }
     
     //必須

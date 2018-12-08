@@ -19,18 +19,8 @@ class APIManager: NSObject {
             .responseJSON { response in
                 switch response.result {
                 case .success(_):
-                    //do {
-                        guard let data = response.data else { return }
-                        
-//                        let jsonResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSMutableDictionary
-//
-//                        let ary = jsonResult["items"] as! NSArray
-                        
-                        success(data)
-//                    }
-//                    catch {
-//                        failure(response.error)
-//                    }
+                    guard let data = response.data else { return }
+                    success(data)
                 case .failure(_):
                     failure(response.error!)
                 }

@@ -1,5 +1,5 @@
 //
-//  YouTubeListDecoder.swift
+//  YouTubeList.swift
 //  Tubers
 //
 //  Created by mmsc on 2018/12/01.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct YouTubeListDecoder: Codable {
+struct YouTubeList: Codable {
     
     var pageInfo: pInfo?
     var etag: String?

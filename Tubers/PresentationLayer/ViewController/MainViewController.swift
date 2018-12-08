@@ -9,6 +9,11 @@
 import UIKit
 import XLPagerTabStrip
 
+/*
+ - 画面表示やユーザのタッチイベントなどのイベントをPresenterに通知する
+ - Presenterから受けたModelのデータやステータスによりViewの表示を切り替える
+ */
+
 class MainViewController: ButtonBarPagerTabStripViewController {
 
     override func viewDidLoad() {

@@ -21,12 +21,12 @@ class YoutuberListTableViewCell: UITableViewCell {
     // 日付け
     @IBOutlet weak var dateLabel: UILabel!
     
-    func setUp(itemInfoList: Array<Any>) {
+    func setUpCell(itemInfoList: YouTubeList.itemInfoList) {
         
         //guard let items = youtubeList.items![index] else { return }
-        //thumbnailImageView.image = youtubeList[0]
+       // thumbnailImageView.image = itemInfoList.snippet?.thumbnails?.default?.url
         
-        //titleLabel.text = youtubeList.
+        titleLabel.text = itemInfoList.snippet?.title
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

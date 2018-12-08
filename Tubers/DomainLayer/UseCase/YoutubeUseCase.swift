@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 /*
  - ユースケースに必要なロジック処理を記述する
@@ -17,11 +19,13 @@ import Foundation
 class YoutubeUseCase {
 
     // Youtube一覧
-    var youtubeList = [YouTubeList]()
+    var youtubeList = YouTubeList()
+    
+    private let eventSubject = PublishSubject<Int>()
+    var event: Observable<Int> { return eventSubject }
     
     func loadYouTubeList() {
         
-        //      XI7nbFXulYBIpL0ayR_gDh3eu1k/ewwRz0VbTYpp2EGbOkvZ5M_1mbo
         let apiManager = APIManager()
         //        let x = "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&key=AIzaSyBEa4NITxrcRcz3xmTthwDTX4FqIz9jJic&id=%E3%83%A9%E3%83%95%E3%82%A1%E3%82%A8%E3%83%AB"
         //        let x = "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&key=AIzaSyBEa4NITxrcRcz3xmTthwDTX4FqIz9jJic&id=UCI8U2EcQDPwiQmQMBOtjzKA"
@@ -32,14 +36,11 @@ class YoutubeUseCase {
             
             let decoder: JSONDecoder = JSONDecoder()
             do {
-               // let xx = try decoder.decode(YouTubeList.self, from: result)
-                self.youtubeList = [try decoder.decode(YouTubeList.self, from: result)]
+                self.youtubeList = try decoder.decode(YouTubeList.self, from: result)
+                self.eventSubject.onNext(1)
             } catch {
                 print("json convert failed in JSONDecoder", error.localizedDescription)
             }
-            
-           // return self.youtubeList
-            
         }, failure: {(result: Error?) -> Void in
             
         })

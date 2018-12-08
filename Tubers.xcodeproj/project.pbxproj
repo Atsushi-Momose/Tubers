@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77AD7889961AC174CE11E03C /* Pods_Tubers_TubersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA2A888C37A9F8057250480 /* Pods_Tubers_TubersTests.framework */; };
 		87661FA0E63AB9A8A87D35C3 /* Pods_TubersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0EF526D2B4A5A01871F6301 /* Pods_TubersUITests.framework */; };
 		AF1DEC02B65797BC6D31A95A /* Pods_TubersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9DC4B2F8A435A20B4712BB /* Pods_TubersTests.framework */; };
 		B91C7E56645CBA9448C96298 /* Pods_Tubers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE58787D42811A60D16CBADA /* Pods_Tubers.framework */; };
@@ -49,6 +50,8 @@
 
 /* Begin PBXFileReference section */
 		0630E74F53D620EC37A0B099 /* Pods-TubersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubersTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TubersTests/Pods-TubersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0EA2A888C37A9F8057250480 /* Pods_Tubers_TubersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tubers_TubersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26AC826E70916A7C7D2C2357 /* Pods-Tubers-TubersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tubers-TubersTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tubers-TubersTests/Pods-Tubers-TubersTests.release.xcconfig"; sourceTree = "<group>"; };
 		52362DF68AF545C6266403C5 /* Pods-TubersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubersUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TubersUITests/Pods-TubersUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		53D7A99AF37CDA453177C7D8 /* Pods-TubersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubersUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TubersUITests/Pods-TubersUITests.release.xcconfig"; sourceTree = "<group>"; };
 		60BAAC9C0D0064C13FC79DF0 /* Pods-Tubers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tubers.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tubers/Pods-Tubers.release.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 		C4F5F63221A823E0003ECD04 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		C4F5F63421A8243E003ECD04 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		C4F5F63721A83431003ECD04 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		E76EE49CD8D4B1E5A29C75B0 /* Pods-Tubers-TubersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tubers-TubersTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tubers-TubersTests/Pods-Tubers-TubersTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F022B890C554B0432F6FF12B /* Pods-TubersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubersTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TubersTests/Pods-TubersTests.release.xcconfig"; sourceTree = "<group>"; };
 		F0EF526D2B4A5A01871F6301 /* Pods_TubersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TubersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -98,6 +102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF1DEC02B65797BC6D31A95A /* Pods_TubersTests.framework in Frameworks */,
+				77AD7889961AC174CE11E03C /* Pods_Tubers_TubersTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +124,7 @@
 				AE58787D42811A60D16CBADA /* Pods_Tubers.framework */,
 				BD9DC4B2F8A435A20B4712BB /* Pods_TubersTests.framework */,
 				F0EF526D2B4A5A01871F6301 /* Pods_TubersUITests.framework */,
+				0EA2A888C37A9F8057250480 /* Pods_Tubers_TubersTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -292,6 +298,8 @@
 				F022B890C554B0432F6FF12B /* Pods-TubersTests.release.xcconfig */,
 				52362DF68AF545C6266403C5 /* Pods-TubersUITests.debug.xcconfig */,
 				53D7A99AF37CDA453177C7D8 /* Pods-TubersUITests.release.xcconfig */,
+				E76EE49CD8D4B1E5A29C75B0 /* Pods-Tubers-TubersTests.debug.xcconfig */,
+				26AC826E70916A7C7D2C2357 /* Pods-Tubers-TubersTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -339,6 +347,7 @@
 				C4B1E0DC21A816DB00B94292 /* Sources */,
 				C4B1E0DD21A816DB00B94292 /* Frameworks */,
 				C4B1E0DE21A816DB00B94292 /* Resources */,
+				E68AD70FAE210324EEFC6F1E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -469,7 +478,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TubersTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Tubers-TubersTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -506,6 +515,8 @@
 				"${BUILT_PRODUCTS_DIR}/Keys/Keys.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -515,6 +526,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Keys.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,6 +547,42 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
+		};
+		E68AD70FAE210324EEFC6F1E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Tubers-TubersTests/Pods-Tubers-TubersTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GradientCircularProgress/GradientCircularProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/Keys/Keys.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GradientCircularProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Keys.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tubers-TubersTests/Pods-Tubers-TubersTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -766,7 +815,7 @@
 		};
 		C4B1E0F821A816DB00B94292 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0630E74F53D620EC37A0B099 /* Pods-TubersTests.debug.xcconfig */;
+			baseConfigurationReference = E76EE49CD8D4B1E5A29C75B0 /* Pods-Tubers-TubersTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -788,7 +837,7 @@
 		};
 		C4B1E0F921A816DB00B94292 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F022B890C554B0432F6FF12B /* Pods-TubersTests.release.xcconfig */;
+			baseConfigurationReference = 26AC826E70916A7C7D2C2357 /* Pods-Tubers-TubersTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

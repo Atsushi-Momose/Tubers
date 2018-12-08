@@ -14,6 +14,9 @@ PODS:
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
   - R.swift.Library (4.0.0)
+  - RxCocoa (2.6.1):
+    - RxSwift (~> 2.6)
+  - RxSwift (2.6.1)
   - XLPagerTabStrip (8.1.0)
 
 DEPENDENCIES:
@@ -22,6 +25,8 @@ DEPENDENCIES:
   - Keys (from `Pods/CocoaPodsKeys`)
   - PromiseKit
   - R.swift
+  - RxCocoa (~> 2.0)
+  - RxSwift (~> 2.0)
   - XLPagerTabStrip
 
 SPEC REPOS:
@@ -30,6 +35,8 @@ SPEC REPOS:
     - PromiseKit
     - R.swift
     - R.swift.Library
+    - RxCocoa
+    - RxSwift
     - XLPagerTabStrip
 
 EXTERNAL SOURCES:
@@ -50,8 +57,10 @@ SPEC CHECKSUMS:
   PromiseKit: c609029bdd801f792551a504c695c7d3098b42cd
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
+  RxCocoa: 3bb2820fd2a1ba48a70d38926bec0803838ae802
+  RxSwift: 0147fbf94e65c6085da9540de92848189ac1c3f6
   XLPagerTabStrip: 22d4c58200d7c105e0e407ab6bfd01a5d85014be
 
-PODFILE CHECKSUM: 095100cd32f94eb12b55f371c11984119dca79b8
+PODFILE CHECKSUM: 1c28a5ffc09b6ceebcff1343c6353cf144436f8b
 
 COCOAPODS: 1.5.3

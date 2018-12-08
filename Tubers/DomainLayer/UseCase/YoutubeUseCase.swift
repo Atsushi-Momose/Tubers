@@ -14,12 +14,12 @@ import Foundation
  - UIには直接関与しない(View,ViewControllerから直接参照されない)
 */
 
-class YoutubeUseCase: NSObject {
-    
+class YoutubeUseCase {
+
     // Youtube一覧
     var youtubeList = [YouTubeList]()
     
-    func loadYouTubeList() -> [YouTubeList] {
+    func loadYouTubeList() {
         
         //      XI7nbFXulYBIpL0ayR_gDh3eu1k/ewwRz0VbTYpp2EGbOkvZ5M_1mbo
         let apiManager = APIManager()
@@ -32,15 +32,16 @@ class YoutubeUseCase: NSObject {
             
             let decoder: JSONDecoder = JSONDecoder()
             do {
+               // let xx = try decoder.decode(YouTubeList.self, from: result)
                 self.youtubeList = [try decoder.decode(YouTubeList.self, from: result)]
-                
             } catch {
                 print("json convert failed in JSONDecoder", error.localizedDescription)
             }
+            
+           // return self.youtubeList
+            
         }, failure: {(result: Error?) -> Void in
             
         })
-    
-        return youtubeList
     }
 }

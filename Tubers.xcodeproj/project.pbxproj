@@ -11,6 +11,8 @@
 		87661FA0E63AB9A8A87D35C3 /* Pods_TubersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0EF526D2B4A5A01871F6301 /* Pods_TubersUITests.framework */; };
 		AF1DEC02B65797BC6D31A95A /* Pods_TubersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9DC4B2F8A435A20B4712BB /* Pods_TubersTests.framework */; };
 		B91C7E56645CBA9448C96298 /* Pods_Tubers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE58787D42811A60D16CBADA /* Pods_Tubers.framework */; };
+		C413CCDD21BC1976003F4728 /* YoutuberListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413CCDB21BC1976003F4728 /* YoutuberListTableViewCell.swift */; };
+		C413CCDE21BC1976003F4728 /* YoutuberListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C413CCDC21BC1976003F4728 /* YoutuberListTableViewCell.xib */; };
 		C4894AC721B1791E00DCE9E9 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4894AC621B1791D00DCE9E9 /* R.generated.swift */; };
 		C4894ACE21B1897E00DCE9E9 /* YouTubeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4894ACD21B1897E00DCE9E9 /* YouTubeList.swift */; };
 		C4B1E0D021A816D900B94292 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1E0CF21A816D900B94292 /* AppDelegate.swift */; };
@@ -58,6 +60,8 @@
 		862DC446D52A28B031243280 /* Pods-Tubers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tubers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tubers/Pods-Tubers.debug.xcconfig"; sourceTree = "<group>"; };
 		AE58787D42811A60D16CBADA /* Pods_Tubers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tubers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9DC4B2F8A435A20B4712BB /* Pods_TubersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TubersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C413CCDB21BC1976003F4728 /* YoutuberListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutuberListTableViewCell.swift; sourceTree = "<group>"; };
+		C413CCDC21BC1976003F4728 /* YoutuberListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YoutuberListTableViewCell.xib; sourceTree = "<group>"; };
 		C4894AC621B1791D00DCE9E9 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = Utility/R.generated.swift; sourceTree = SOURCE_ROOT; };
 		C4894ACD21B1897E00DCE9E9 /* YouTubeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeList.swift; sourceTree = "<group>"; };
 		C4B1E0CC21A816D800B94292 /* Tubers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tubers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +131,13 @@
 				0EA2A888C37A9F8057250480 /* Pods_Tubers_TubersTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C413CCD421BC07C9003F4728 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C4B1E0C321A816D800B94292 = {
@@ -209,8 +220,11 @@
 			children = (
 				C4B1E0D121A816D900B94292 /* MainViewController.swift */,
 				C4F5F63021A82251003ECD04 /* FirstViewController.swift */,
+				C413CCDB21BC1976003F4728 /* YoutuberListTableViewCell.swift */,
 				C4F5F63221A823E0003ECD04 /* SecondViewController.swift */,
 				C4F5F63421A8243E003ECD04 /* ThirdViewController.swift */,
+				C413CCD421BC07C9003F4728 /* View */,
+				C413CCDC21BC1976003F4728 /* YoutuberListTableViewCell.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -427,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4B1E0DA21A816DA00B94292 /* LaunchScreen.storyboard in Resources */,
+				C413CCDE21BC1976003F4728 /* YoutuberListTableViewCell.xib in Resources */,
 				C4B1E0D721A816DA00B94292 /* Assets.xcassets in Resources */,
 				C4B1E0D521A816D900B94292 /* Main.storyboard in Resources */,
 			);
@@ -553,16 +568,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TubersTests/Pods-TubersTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -586,6 +597,7 @@
 				C4894ACE21B1897E00DCE9E9 /* YouTubeList.swift in Sources */,
 				C4F5F63321A823E0003ECD04 /* SecondViewController.swift in Sources */,
 				C4894AC721B1791E00DCE9E9 /* R.generated.swift in Sources */,
+				C413CCDD21BC1976003F4728 /* YoutuberListTableViewCell.swift in Sources */,
 				C4F5F63121A82251003ECD04 /* FirstViewController.swift in Sources */,
 				C4C034BB21A867B60026945B /* ProgressStyle.swift in Sources */,
 				C4F5F63521A8243E003ECD04 /* ThirdViewController.swift in Sources */,

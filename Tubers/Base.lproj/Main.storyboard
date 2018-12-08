@@ -74,9 +74,28 @@
                     <view key="view" contentMode="scaleToFill" id="lrA-RI-vQG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hBH-tb-GFj">
+                                <rect key="frame" x="20" y="80" width="335" height="567"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="XkP-Em-y3N" id="C2D-XJ-aZZ"/>
+                                    <outlet property="delegate" destination="XkP-Em-y3N" id="vBy-VG-fdn"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.92728822969543145" green="0.59937931503741282" blue="0.85145001726100811" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zDW-Vn-4S7" firstAttribute="bottom" secondItem="hBH-tb-GFj" secondAttribute="bottom" constant="20" id="8io-ki-V5Y"/>
+                            <constraint firstItem="hBH-tb-GFj" firstAttribute="leading" secondItem="zDW-Vn-4S7" secondAttribute="leading" constant="20" id="ONl-Cv-Kon"/>
+                            <constraint firstItem="zDW-Vn-4S7" firstAttribute="trailing" secondItem="hBH-tb-GFj" secondAttribute="trailing" constant="20" id="Oqd-E9-yZG"/>
+                            <constraint firstItem="hBH-tb-GFj" firstAttribute="top" secondItem="zDW-Vn-4S7" secondAttribute="top" constant="60" id="wyk-Rz-JXg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zDW-Vn-4S7"/>
                     </view>
+                    <connections>
+                        <outlet property="youtubListTableView" destination="hBH-tb-GFj" id="VDf-Wn-ATp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sea-nn-SKN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

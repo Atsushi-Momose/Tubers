@@ -19,7 +19,7 @@ import Foundation
     let youtubeUseCase = YoutubeUseCase()
     
     // Youtube一覧
-    func getYoutubeList() {
-        youtubeUseCase.loadYouTubeList()
+    func getYoutubeList() -> [YouTubeList]  {
+        return youtubeUseCase.loadYouTubeList()
     }
 }

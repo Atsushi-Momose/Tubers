@@ -19,7 +19,7 @@ class YoutubeUseCase: NSObject {
     // Youtube一覧
     var youtubeList = [YouTubeList]()
     
-    func loadYouTubeList() {
+    func loadYouTubeList() -> [YouTubeList] {
         
         //      XI7nbFXulYBIpL0ayR_gDh3eu1k/ewwRz0VbTYpp2EGbOkvZ5M_1mbo
         let apiManager = APIManager()
@@ -40,5 +40,7 @@ class YoutubeUseCase: NSObject {
         }, failure: {(result: Error?) -> Void in
             
         })
+    
+        return youtubeList
     }
 }

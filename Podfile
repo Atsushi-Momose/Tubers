@@ -8,15 +8,15 @@ target 'Tubers' do
    pod "PromiseKit"
    pod "XLPagerTabStrip"
    pod 'R.swift'
-   pod 'RxSwift',    '~> 2.0'
-   pod 'RxCocoa',    '~> 2.0'
+   pod 'RxSwift',    '~> 4.1.1'
+   pod 'RxCocoa',    '~> 4.1.1'
    pod 'GradientCircularProgress', :git => 'https://github.com/keygx/GradientCircularProgress'
 
   # Pods for Tubers
 
   target 'TubersTests' do
-   pod 'RxSwift',    '~> 2.0'
-   pod 'RxCocoa',    '~> 2.0'
+   pod 'RxSwift',    '~> 4.1.1'
+   pod 'RxCocoa',    '~> 4.1.1'
     inherit! :search_paths
     # Pods for testing
   end

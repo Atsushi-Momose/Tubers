@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.7.3)
   - GradientCircularProgress (3.10.1)
   - Keys (1.0.1)
+  - Kingfisher (4.10.1)
   - PromiseKit (6.5.3):
     - PromiseKit/CorePromise (= 6.5.3)
     - PromiseKit/Foundation (= 6.5.3)
@@ -23,6 +24,7 @@ DEPENDENCIES:
   - Alamofire
   - GradientCircularProgress (from `https://github.com/keygx/GradientCircularProgress`)
   - Keys (from `Pods/CocoaPodsKeys`)
+  - Kingfisher
   - PromiseKit
   - R.swift
   - RxCocoa (~> 4.1.1)
@@ -32,6 +34,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Kingfisher
     - PromiseKit
     - R.swift
     - R.swift.Library
@@ -54,6 +57,7 @@ SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   GradientCircularProgress: 7f3638d14b34b8181888d3a96e6bc045b6c0c184
   Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   PromiseKit: c609029bdd801f792551a504c695c7d3098b42cd
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
@@ -61,6 +65,6 @@ SPEC CHECKSUMS:
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   XLPagerTabStrip: 22d4c58200d7c105e0e407ab6bfd01a5d85014be
 
-PODFILE CHECKSUM: 849af8a4a107445a401ad423def6353da925e8b9
+PODFILE CHECKSUM: b073c7fd923a15fc7a6f21588d8efff030e25cd8
 
 COCOAPODS: 1.5.3

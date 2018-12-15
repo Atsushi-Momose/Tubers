@@ -11,6 +11,7 @@ target 'Tubers' do
    pod 'RxSwift',    '~> 4.1.1'
    pod 'RxCocoa',    '~> 4.1.1'
    pod 'GradientCircularProgress', :git => 'https://github.com/keygx/GradientCircularProgress'
+   pod 'Kingfisher'
 
   # Pods for Tubers
 

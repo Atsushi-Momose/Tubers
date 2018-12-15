@@ -43,10 +43,6 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-//        // Youtube一覧取得
-//        presenter.getYoutubeList()
-//        getSubscribe()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -80,6 +76,12 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let youtubeList = self.youtubeList.items else { return 0}
         return youtubeList.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        tableView.estimatedRowHeight = 20 //セルの高さ
+        return UITableViewAutomaticDimension //自動設定
     }
     
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

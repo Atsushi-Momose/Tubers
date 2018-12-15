@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class YoutuberListTableViewCell: UITableViewCell {
     
@@ -23,16 +24,27 @@ class YoutuberListTableViewCell: UITableViewCell {
     
     func setUpCell(itemInfoList: YouTubeList.itemInfoList) {
         
-        //guard let items = youtubeList.items![index] else { return }
-       // thumbnailImageView.image = itemInfoList.snippet?.thumbnails?.default?.url
+        guard let snippet = itemInfoList.snippet  else { return }
         
-        titleLabel.text = itemInfoList.snippet?.title
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        // Youtuber名
+        channelTitleLabel.text = snippet.channelTitle
+        
+        // 動画タイトル
+        titleLabel.text = snippet.title
+        
+        // イメージ
+        guard let imageUrl = snippet.thumbnails?.default?.url else { return }
+       // thumbnailImageView.kf.setImage(with: URL(string: imageUrl))
+        
+        thumbnailImageView.kf.setImage(with: URL(string: imageUrl), placeholder: nil, options: nil, progressBlock: { receivedSize, totalSize in
+        }, completionHandler: { image, error, cacheType, imageURL in
+        })
+        
+       // self.addSubview(thumbnailImageView)
     }
     
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+    }
 }

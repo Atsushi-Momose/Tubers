@@ -30,10 +30,12 @@ class YoutubeUseCase {
     func loadYouTubeList(nextPageToken: String = "") {
         
         let apiManager = APIManager()
-        //        let x = "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&key=AIzaSyBEa4NITxrcRcz3xmTthwDTX4FqIz9jJic&id=%E3%83%A9%E3%83%95%E3%82%A1%E3%82%A8%E3%83%AB"
-        //        let x = "https://www.googleapis.com/youtube/v3/channels?part=contentDetails&key=AIzaSyBEa4NITxrcRcz3xmTthwDTX4FqIz9jJic&id=UCI8U2EcQDPwiQmQMBOtjzKA"
         
         let url = nextPageToken != "" ? TubersKeys().youtubeAPIKey + "&pageToken=" + nextPageToken : TubersKeys().youtubeAPIKey
+        
+        /* ラファエルチャンネル
+       let url = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCI8U2EcQDPwiQmQMBOtjzKA&maxResults=5&order=date&type=video&key=AIzaSyBEa4NITxrcRcz3xmTthwDTX4FqIz9jJic"
+        */
         
         apiManager.ConnectionAPI(url: url, success: {(result: Data) -> Void in
             

@@ -59,21 +59,21 @@ class ProgressViewController: UIViewController {
         viewRect = window.frame
     }
     
-    private func getBlurView() {
-        
-        guard let rect = viewRect, let prop = prop else {
-            return
-        }
-        
-        blurView = Background().blurEffectView(fromBlurStyle: prop.backgroundStyle, frame: rect)
-        
-        guard let blurView = blurView else {
-            return
-        }
-        
-        view.backgroundColor = UIColor.clear
-        view.addSubview(blurView)
-    }
+//    private func getBlurView() {
+//
+//        guard let rect = viewRect, let prop = prop else {
+//            return
+//        }
+//
+//        blurView = Background().blurEffectView(fromBlurStyle: prop.backgroundStyle, frame: rect)
+//
+//        guard let blurView = blurView else {
+//            return
+//        }
+//
+//        view.backgroundColor = UIColor.clear
+//        view.addSubview(blurView)
+//    }
     
     internal func arc(display: Bool, style: StyleProperty, baseWindow: BaseWindow?) {
         
@@ -87,7 +87,7 @@ class ProgressViewController: UIViewController {
         
         getViewRect()
         
-        getBlurView()
+       // getBlurView()
         
         progressAtRatioView = ProgressAtRatioView(frame: CGRect(x: 0, y: 0, width: prop.progressSize, height: prop.progressSize))
         
@@ -118,7 +118,7 @@ class ProgressViewController: UIViewController {
         
         getViewRect()
         
-        getBlurView()
+        //getBlurView()
                 
         circularProgressView = CircularProgressView(frame: CGRect(x: 0, y: 0, width: prop.progressSize, height: prop.progressSize))
         

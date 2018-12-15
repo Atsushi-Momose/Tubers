@@ -16,23 +16,27 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     
     let presenter = FirstViewPresenter()
     
-    var youtubeList = YouTubeList()
+    var youtubeList = YouTubeList() // youtube一覧
     
     let disposeBag = DisposeBag()
     
+    var isLoad =  false // 複数回APIを叩かない為のフラグ
+    
     // ボタンタイトル
     var itemInfo: IndicatorInfo = "First"
+    
     // インジケーター
     let progress = GradientCircularProgress()
+    
+    // インジケーター設定
+    let progressStyle = ProgressStyle()
 
     @IBOutlet weak var youtubListTableView: UITableView!
    
     override func viewDidLoad() {
         super.viewDidLoad()
        
-//        let progressView = progress.show(frame: self.view.frame, message: "Loading...", style: ProgressStyle())
-//        view.addSubview(progressView!)
-        //progress.show()
+        progress.show(style: progressStyle)
         
         youtubListTableView.register (UINib(nibName: "YoutuberListTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
         
@@ -41,21 +45,15 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
         getSubscribe()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        progress.dismiss()
-    }
-    
     private func getSubscribe() {
         let _ = presenter.event.subscribe (
             // 通常イベント発生時の処理
             onNext: { value in
                 self.youtubeList = self.presenter.youtubeList
+                
                 self.youtubListTableView.reloadData()
+                self.isLoad = false
+                self.progress.dismiss()
         },
             onError: { error in
                 // エラー発生時の処理
@@ -68,7 +66,7 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
         //disposable.dispose()
     }
     
-    //必須
+    // XLPagerTabStrip 必須
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return itemInfo
     }
@@ -79,19 +77,31 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
         tableView.estimatedRowHeight = 20 //セルの高さ
         return UITableViewAutomaticDimension //自動設定
     }
     
-    internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell") as! YoutuberListTableViewCell
         
         guard let items = self.youtubeList.items else { return cell }
         let itemInfo = items[indexPath.row]
         
-        cell.setUpCell(itemInfoList: itemInfo)
+        cell.setUpCell(indexPath: indexPath.row, itemInfoList: itemInfo)
         
         return cell
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        // 一番下までスクロールした場合
+        if youtubListTableView.contentOffset.y + youtubListTableView.frame.size.height > youtubListTableView.contentSize.height && youtubListTableView.isDragging {
+           
+            if !isLoad {
+                progress.show(style: progressStyle)
+                presenter.getYoutubeList()
+                isLoad = true
+            }
+        }
     }
 }

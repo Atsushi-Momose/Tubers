@@ -12,15 +12,15 @@ import Foundation
 struct ProgressStyle: StyleProperty {
     
     // Progress Size
-    public var progressSize: CGFloat = 200
+    public var progressSize: CGFloat = 50
     
     // Gradient Circular
-    public var arcLineWidth: CGFloat = 7.0
+    public var arcLineWidth: CGFloat = 4.0
     public var startArcColor: UIColor = UIColor.blue
     public var endArcColor: UIColor = UIColor.green
     
     // Base Circular
-    public var baseLineWidth: CGFloat? = 7.0
+    public var baseLineWidth: CGFloat? = 4.0
     public var baseArcColor: UIColor? = UIColor.darkGray
     
     // Ratio

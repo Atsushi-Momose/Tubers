@@ -11,6 +11,10 @@ import Kingfisher
 
 class YoutuberListTableViewCell: UITableViewCell {
     
+    // 項番
+    @IBOutlet weak var numberLabel: UILabel!
+    
+    // イメージ
     @IBOutlet weak var thumbnailImageView: UIImageView!
     
     // 名前
@@ -22,9 +26,12 @@ class YoutuberListTableViewCell: UITableViewCell {
     // 日付け
     @IBOutlet weak var dateLabel: UILabel!
     
-    func setUpCell(itemInfoList: YouTubeList.itemInfoList) {
+    func setUpCell(indexPath: Int, itemInfoList: YouTubeList.itemInfoList) {
         
         guard let snippet = itemInfoList.snippet  else { return }
+        
+        // 番号
+        numberLabel.text = String(indexPath + 1)
         
         // Youtuber名
         channelTitleLabel.text = snippet.channelTitle
@@ -32,15 +39,22 @@ class YoutuberListTableViewCell: UITableViewCell {
         // 動画タイトル
         titleLabel.text = snippet.title
         
+        // 日付け
+        var dateText = String()
+       
+        if let publishedAt = snippet.publishedAt {
+           let strings = publishedAt.components(separatedBy: "T")
+            dateText = strings.first!
+        }
+        
+         dateLabel.text = dateText
+        
         // イメージ
         guard let imageUrl = snippet.thumbnails?.default?.url else { return }
-       // thumbnailImageView.kf.setImage(with: URL(string: imageUrl))
         
         thumbnailImageView.kf.setImage(with: URL(string: imageUrl), placeholder: nil, options: nil, progressBlock: { receivedSize, totalSize in
         }, completionHandler: { image, error, cacheType, imageURL in
         })
-        
-       // self.addSubview(thumbnailImageView)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

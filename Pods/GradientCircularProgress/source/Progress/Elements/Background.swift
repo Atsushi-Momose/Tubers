@@ -9,28 +9,28 @@
 
 struct Background {
     
-    internal func blurEffectView(fromBlurStyle style: BackgroundStyles, frame: CGRect) -> UIVisualEffectView? {
-        
-        var blurView: UIVisualEffectView?
-        
-        // return (blurEffectStyle: UIBlurEffectStyle?, isUserInteraction: Bool)
-        let backgroundStyle = getStyle(style)
-        
-        if let blur = backgroundStyle.blurEffectStyle {
-            // UIBlurEffectStyle (.extraLight, .light, .dark)
-            let effect = UIBlurEffect(style: blur)
-            blurView = UIVisualEffectView(effect: effect)
-        
-        } else {
-            if !backgroundStyle.isUserInteraction {
-                // .transparent
-                blurView = UIVisualEffectView(effect: nil)
-            }
-        }
-        
-        blurView?.frame = frame
-        return blurView
-    }
+//    internal func blurEffectView(fromBlurStyle style: BackgroundStyles, frame: CGRect) -> UIVisualEffectView? {
+//
+//        let blurView: UIVisualEffectView?
+//
+////        return (blurEffectStyle: UIBlurEffectStyle?, isUserInteraction: Bool)
+////        _ = getStyle(style)
+//
+////        if let blur = backgroundStyle.blurEffectStyle {
+////            // UIBlurEffectStyle (.extraLight, .light, .dark)
+////            let effect = UIBlurEffect(style: blur)
+////            blurView = UIVisualEffectView(effect: effect)
+////
+////        } else {
+////            if !backgroundStyle.isUserInteraction {
+////                // .transparent
+////                //blurView = UIVisualEffectView(effect: nil)
+////            }
+////        }
+//
+// //       blurView?.frame = frame
+//        return blurView
+//    }
     
     private func getStyle(_ style: BackgroundStyles) -> (blurEffectStyle: UIBlurEffectStyle?, isUserInteraction: Bool) {
         switch style {

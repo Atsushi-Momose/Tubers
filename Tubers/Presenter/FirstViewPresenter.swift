@@ -22,20 +22,23 @@ class FirstViewPresenter: NSObject {
     
     var youtubeList = YouTubeList()
     
+    var nextPageToken = String()
+    
     private let eventSubject = PublishSubject<Int>()
     var event: Observable<Int> { return eventSubject }
     
     // Youtube一覧
     func getYoutubeList() {
-        youtubeUseCase.loadYouTubeList()
-        getSubscribe()
+        youtubeUseCase.loadYouTubeList(nextPageToken: self.nextPageToken)
+        getSubscribe(nextPageToken: self.nextPageToken)
     }
     
-    private func getSubscribe() {
+    private func getSubscribe(nextPageToken : String = "") {
         let _ = youtubeUseCase.event.subscribe (
             // 通常イベント発生時の処理
             onNext: { value in
                 self.youtubeList = self.youtubeUseCase.youtubeList
+                self.nextPageToken = self.youtubeUseCase.youtubeList.nextPageToken!
                 self.eventSubject.onNext(1)
         },
             onError: { error in

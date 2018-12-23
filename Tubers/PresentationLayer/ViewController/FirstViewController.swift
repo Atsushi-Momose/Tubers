@@ -20,7 +20,9 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     
     let disposeBag = DisposeBag()
     
-    var isLoad =  false // 複数回APIを叩かない為のフラグ
+    var isLoad = false // 複数回APIを叩かない為のフラグ
+    
+    var isSearch = false // 検索中かのフラグ
     
     // ボタンタイトル
     var itemInfo: IndicatorInfo = "First"
@@ -41,6 +43,8 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
         super.viewDidLoad()
        
         progress.show(style: progressStyle)
+        
+        searchTextField.placeholder = "チャンネル名を入力"
         
         youtubListTableView.register (UINib(nibName: "YoutuberListTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
         
@@ -103,9 +107,35 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
            
             if !isLoad {
                 progress.show(style: progressStyle)
-                presenter.getYoutubeList()
+                isSearch ? presenter.searchChannel() : presenter.getYoutubeList()
                 isLoad = true
             }
         }
     }
+    
+    func trim(string: String) -> String {
+        return string.trimmingCharacters(in: .whitespaces)
+    }
+    
+    func urlEncode(string: String) -> String {
+        return string.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
+    }
+    
+    @IBAction func searchButtonAction(_ sender: UIButton) {
+
+        // 余分なスペースは除く
+        let text = trim(string: searchTextField.text!)
+
+        if text.count == 0 {
+            isSearch = false // 検索中フラグOFF
+            return
+        }
+        
+        isSearch = true
+        presenter.setSearchChannelFlag(word: urlEncode(string: text))
+    }
+}
+
+extension FirstViewController: UITextFieldDelegate {
+    
 }

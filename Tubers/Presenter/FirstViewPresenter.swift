@@ -24,12 +24,29 @@ class FirstViewPresenter: NSObject {
     
     var nextPageToken = String()
     
+    var searchWord = String()
+    
     private let eventSubject = PublishSubject<Int>()
     var event: Observable<Int> { return eventSubject }
     
     // Youtube一覧
     func getYoutubeList() {
         youtubeUseCase.loadYouTubeList(nextPageToken: self.nextPageToken)
+        getSubscribe(nextPageToken: self.nextPageToken)
+    }
+    
+    // 検索 初回
+    func setSearchChannelFlag(word: String) {
+        searchWord = word
+        nextPageToken = ""
+        youtubeUseCase.isFirst = true
+        // 検索実行
+        searchChannel()
+    }
+    
+    // 検索
+    func searchChannel() {
+        youtubeUseCase.searchChannel(word: searchWord, nextPageToken: self.nextPageToken)
         getSubscribe(nextPageToken: self.nextPageToken)
     }
     

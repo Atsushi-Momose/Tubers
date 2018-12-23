@@ -95,6 +95,9 @@
                                     <constraint firstAttribute="height" constant="30" id="sXp-af-ZbY"/>
                                 </constraints>
                                 <state key="normal" title="検索"/>
+                                <connections>
+                                    <action selector="searchButtonAction:" destination="XkP-Em-y3N" eventType="touchUpInside" id="KQS-NY-n2K"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>

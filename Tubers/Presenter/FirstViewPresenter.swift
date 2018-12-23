@@ -31,26 +31,32 @@ class FirstViewPresenter: NSObject {
     
     // Youtube一覧
     func getYoutubeList() {
-        youtubeUseCase.loadYouTubeList(nextPageToken: self.nextPageToken)
-        getSubscribe(nextPageToken: self.nextPageToken)
-    }
-    
-    // 検索 初回
-    func setSearchChannelFlag(word: String) {
-        searchWord = word
-        nextPageToken = ""
-        youtubeUseCase.isFirst = true
-        // 検索実行
-        searchChannel()
+        
+        let apiConstants = APIConstants()
+        
+        var url = String()
+        
+        if searchWord.count > 0 { // 検索
+            url = nextPageToken != "" ? apiConstants.searchChannelURL + searchWord + "&key=" + TubersKeys().youtubeAPIKey + "&pageToken=" + nextPageToken : apiConstants.searchChannelURL + searchWord + "&key=" + TubersKeys().youtubeAPIKey
+        } else { // 新着一覧
+            url = nextPageToken != "" ? apiConstants.youTubeListURL + TubersKeys().youtubeAPIKey + "&pageToken=" + nextPageToken : apiConstants.youTubeListURL + TubersKeys().youtubeAPIKey
+        }
+
+        youtubeUseCase.loadYouTubeList(url: url)
+        getSubscribe()
     }
     
     // 検索
-    func searchChannel() {
-        youtubeUseCase.searchChannel(word: searchWord, nextPageToken: self.nextPageToken)
-        getSubscribe(nextPageToken: self.nextPageToken)
+    func searchChannel(word: String) {
+        searchWord = word
+        nextPageToken = ""
+        youtubeUseCase.isFirst = true
+        
+        // 検索実行
+        getYoutubeList()
     }
     
-    private func getSubscribe(nextPageToken : String = "") {
+    private func getSubscribe() {
         let _ = youtubeUseCase.event.subscribe (
             // 通常イベント発生時の処理
             onNext: { value in

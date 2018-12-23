@@ -22,8 +22,6 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     
     var isLoad = false // 複数回APIを叩かない為のフラグ
     
-    var isSearch = false // 検索中かのフラグ
-    
     // ボタンタイトル
     var itemInfo: IndicatorInfo = "First"
     
@@ -107,7 +105,7 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
            
             if !isLoad {
                 progress.show(style: progressStyle)
-                isSearch ? presenter.searchChannel() : presenter.getYoutubeList()
+                presenter.getYoutubeList()
                 isLoad = true
             }
         }
@@ -126,13 +124,9 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
         // 余分なスペースは除く
         let text = trim(string: searchTextField.text!)
 
-        if text.count == 0 {
-            isSearch = false // 検索中フラグOFF
-            return
-        }
+        if text.count == 0 { return }
         
-        isSearch = true
-        presenter.setSearchChannelFlag(word: urlEncode(string: text))
+        presenter.searchChannel(word: urlEncode(string: text))
     }
 }
 

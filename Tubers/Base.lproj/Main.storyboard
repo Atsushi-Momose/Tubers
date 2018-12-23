@@ -83,17 +83,38 @@
                                     <outlet property="delegate" destination="XkP-Em-y3N" id="vBy-VG-fdn"/>
                                 </connections>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RYi-3Z-2aH">
+                                <rect key="frame" x="70" y="30" width="235" height="35"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRP-aI-qXo">
+                                <rect key="frame" x="325" y="32.5" width="31" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="sXp-af-ZbY"/>
+                                </constraints>
+                                <state key="normal" title="検索"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="zDW-Vn-4S7" firstAttribute="bottom" secondItem="hBH-tb-GFj" secondAttribute="bottom" constant="20" id="8io-ki-V5Y"/>
+                            <constraint firstItem="zDW-Vn-4S7" firstAttribute="trailing" secondItem="RYi-3Z-2aH" secondAttribute="trailing" constant="70" id="Ebk-Qu-24s"/>
+                            <constraint firstItem="hBH-tb-GFj" firstAttribute="top" secondItem="RYi-3Z-2aH" secondAttribute="bottom" constant="15" placeholder="YES" id="IWL-85-iGi"/>
                             <constraint firstItem="hBH-tb-GFj" firstAttribute="leading" secondItem="zDW-Vn-4S7" secondAttribute="leading" id="ONl-Cv-Kon"/>
                             <constraint firstItem="zDW-Vn-4S7" firstAttribute="trailing" secondItem="hBH-tb-GFj" secondAttribute="trailing" id="Oqd-E9-yZG"/>
+                            <constraint firstItem="RYi-3Z-2aH" firstAttribute="top" secondItem="zDW-Vn-4S7" secondAttribute="top" constant="10" id="Qx7-WT-gQc"/>
+                            <constraint firstItem="tRP-aI-qXo" firstAttribute="centerY" secondItem="RYi-3Z-2aH" secondAttribute="centerY" id="WFy-0r-Y5x"/>
+                            <constraint firstItem="tRP-aI-qXo" firstAttribute="leading" secondItem="RYi-3Z-2aH" secondAttribute="trailing" constant="20" id="fGp-zG-H9C"/>
+                            <constraint firstItem="RYi-3Z-2aH" firstAttribute="leading" secondItem="zDW-Vn-4S7" secondAttribute="leading" constant="70" id="g0x-Kb-Ikr"/>
                             <constraint firstItem="hBH-tb-GFj" firstAttribute="top" secondItem="zDW-Vn-4S7" secondAttribute="top" constant="60" id="wyk-Rz-JXg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zDW-Vn-4S7"/>
                     </view>
                     <connections>
+                        <outlet property="searchButton" destination="tRP-aI-qXo" id="vYE-KS-56a"/>
+                        <outlet property="searchTextField" destination="RYi-3Z-2aH" id="Jhl-h9-RbR"/>
                         <outlet property="youtubListTableView" destination="hBH-tb-GFj" id="VDf-Wn-ATp"/>
                     </connections>
                 </viewController>

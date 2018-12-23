@@ -31,6 +31,10 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     // インジケーター設定
     let progressStyle = ProgressStyle()
 
+    @IBOutlet weak var searchTextField: UITextField!
+   
+    @IBOutlet weak var searchButton: UIButton!
+    
     @IBOutlet weak var youtubListTableView: UITableView!
    
     override func viewDidLoad() {

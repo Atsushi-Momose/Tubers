@@ -23,7 +23,6 @@
 		C4B1E0E521A816DB00B94292 /* TubersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1E0E421A816DB00B94292 /* TubersTests.swift */; };
 		C4B1E0F021A816DB00B94292 /* TubersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1E0EF21A816DB00B94292 /* TubersUITests.swift */; };
 		C4C034B821A865CB0026945B /* TubersKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = C4C034B721A865CB0026945B /* TubersKeys.h */; };
-		C4C034BB21A867B60026945B /* ProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C034BA21A867B60026945B /* ProgressStyle.swift */; };
 		C4DA751F21BBB79D00795A2B /* FirstViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DA751E21BBB79D00795A2B /* FirstViewPresenter.swift */; };
 		C4DA752621BBC17900795A2B /* YoutubeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DA752521BBC17900795A2B /* YoutubeUseCase.swift */; };
 		C4DA752821BBC5A000795A2B /* YoutubeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DA752721BBC5A000795A2B /* YoutubeRepository.swift */; };
@@ -80,7 +79,6 @@
 		C4B1E0F121A816DB00B94292 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4C034B021A85CA80026945B /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		C4C034B721A865CB0026945B /* TubersKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TubersKeys.h; path = Pods/CocoaPodsKeys/TubersKeys.h; sourceTree = "<group>"; };
-		C4C034BA21A867B60026945B /* ProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressStyle.swift; sourceTree = "<group>"; };
 		C4DA751E21BBB79D00795A2B /* FirstViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewPresenter.swift; sourceTree = "<group>"; };
 		C4DA752521BBC17900795A2B /* YoutubeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeUseCase.swift; sourceTree = "<group>"; };
 		C4DA752721BBC5A000795A2B /* YoutubeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeRepository.swift; sourceTree = "<group>"; };
@@ -204,7 +202,6 @@
 		C4C034B921A8678F0026945B /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				C4C034BA21A867B60026945B /* ProgressStyle.swift */,
 				C4894AC621B1791D00DCE9E9 /* R.generated.swift */,
 			);
 			path = Utility;
@@ -537,10 +534,8 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Tubers/Pods-Tubers-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/GradientCircularProgress/GradientCircularProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/Keys/Keys.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -549,10 +544,8 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GradientCircularProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Keys.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -613,7 +606,6 @@
 				C413CCDD21BC1976003F4728 /* YoutuberListTableViewCell.swift in Sources */,
 				C4F46CBE21CFCDE70094871F /* APIConstants.swift in Sources */,
 				C4F5F63121A82251003ECD04 /* FirstViewController.swift in Sources */,
-				C4C034BB21A867B60026945B /* ProgressStyle.swift in Sources */,
 				C4F5F63521A8243E003ECD04 /* ThirdViewController.swift in Sources */,
 				C4B1E0D221A816D900B94292 /* MainViewController.swift in Sources */,
 				C4B1E0D021A816D900B94292 /* AppDelegate.swift in Sources */,
@@ -802,7 +794,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mmsc.Tubers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -822,7 +814,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mmsc.Tubers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -843,7 +835,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mmsc.TubersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tubers.app/Tubers";
 			};
@@ -865,7 +857,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mmsc.TubersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tubers.app/Tubers";
 			};
@@ -886,7 +878,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mmsc.TubersUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Tubers;
 			};
@@ -907,7 +899,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = mmsc.TubersUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Tubers;
 			};

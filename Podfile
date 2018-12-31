@@ -5,12 +5,10 @@ target 'Tubers' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
    pod "Alamofire"
-   pod "PromiseKit"
    pod "XLPagerTabStrip"
    pod 'R.swift'
-   pod 'RxSwift',    '~> 4.1.1'
-   pod 'RxCocoa',    '~> 4.1.1'
-   pod 'GradientCircularProgress', :git => 'https://github.com/keygx/GradientCircularProgress'
+   pod 'RxSwift'#,    '~> 4.1.1'
+   pod 'RxCocoa'#,    '~> 4.1.1'
    pod 'Kingfisher'
 
   # Pods for Tubers

@@ -51,10 +51,7 @@ class YoutuberListTableViewCell: UITableViewCell {
         
         // イメージ
         guard let imageUrl = snippet.thumbnails?.default?.url else { return }
-        
-        thumbnailImageView.kf.setImage(with: URL(string: imageUrl), placeholder: nil, options: nil, progressBlock: { receivedSize, totalSize in
-        }, completionHandler: { image, error, cacheType, imageURL in
-        })
+        thumbnailImageView.kf.setImage(with:  URL(string: imageUrl))
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

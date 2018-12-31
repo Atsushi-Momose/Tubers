@@ -8,7 +8,6 @@
 
 import Foundation
 import XLPagerTabStrip
-import GradientCircularProgress
 import RxCocoa
 import RxSwift
 
@@ -25,12 +24,6 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     // ボタンタイトル
     var itemInfo: IndicatorInfo = "First"
     
-    // インジケーター
-    let progress = GradientCircularProgress()
-    
-    // インジケーター設定
-    let progressStyle = ProgressStyle()
-
     @IBOutlet weak var searchTextField: UITextField!
    
     @IBOutlet weak var searchButton: UIButton!
@@ -39,9 +32,6 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        progress.show(style: progressStyle)
-        
         searchTextField.placeholder = "チャンネル名を入力"
         
         youtubListTableView.register (UINib(nibName: "YoutuberListTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
@@ -59,7 +49,6 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
                 
                 self.youtubListTableView.reloadData()
                 self.isLoad = false
-                self.progress.dismiss()
         },
             onError: { error in
                 // エラー発生時の処理
@@ -84,7 +73,7 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         tableView.estimatedRowHeight = 20 //セルの高さ
-        return UITableViewAutomaticDimension //自動設定
+        return UITableView.automaticDimension //自動設定
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -104,7 +93,6 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
         if youtubListTableView.contentOffset.y + youtubListTableView.frame.size.height > youtubListTableView.contentSize.height && youtubListTableView.isDragging {
            
             if !isLoad {
-                progress.show(style: progressStyle)
                 presenter.getYoutubeList()
                 isLoad = true
             }

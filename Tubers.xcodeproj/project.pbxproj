@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		77AD7889961AC174CE11E03C /* Pods_Tubers_TubersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA2A888C37A9F8057250480 /* Pods_Tubers_TubersTests.framework */; };
-		87661FA0E63AB9A8A87D35C3 /* Pods_TubersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0EF526D2B4A5A01871F6301 /* Pods_TubersUITests.framework */; };
+		9010B8052283DC0200F7B5BD /* TubersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1E0E421A816DB00B94292 /* TubersTests.swift */; };
+		9010B8062283DC1900F7B5BD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4B1E0E621A816DB00B94292 /* Info.plist */; };
+		9010B8072283DC1C00F7B5BD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4B1E0F121A816DB00B94292 /* Info.plist */; };
 		90806C03226B86110023FEC4 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90806C02226B86110023FEC4 /* R.generated.swift */; };
-		AF1DEC02B65797BC6D31A95A /* Pods_TubersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD9DC4B2F8A435A20B4712BB /* Pods_TubersTests.framework */; };
-		B91C7E56645CBA9448C96298 /* Pods_Tubers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE58787D42811A60D16CBADA /* Pods_Tubers.framework */; };
 		C413CCDD21BC1976003F4728 /* YoutuberListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413CCDB21BC1976003F4728 /* YoutuberListTableViewCell.swift */; };
 		C413CCDE21BC1976003F4728 /* YoutuberListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C413CCDC21BC1976003F4728 /* YoutuberListTableViewCell.xib */; };
 		C4894AC721B1791E00DCE9E9 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4894AC621B1791D00DCE9E9 /* R.generated.swift */; };
@@ -21,7 +20,6 @@
 		C4B1E0D521A816D900B94292 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4B1E0D321A816D900B94292 /* Main.storyboard */; };
 		C4B1E0D721A816DA00B94292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4B1E0D621A816DA00B94292 /* Assets.xcassets */; };
 		C4B1E0DA21A816DA00B94292 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4B1E0D821A816DA00B94292 /* LaunchScreen.storyboard */; };
-		C4B1E0E521A816DB00B94292 /* TubersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1E0E421A816DB00B94292 /* TubersTests.swift */; };
 		C4B1E0F021A816DB00B94292 /* TubersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1E0EF21A816DB00B94292 /* TubersUITests.swift */; };
 		C4C034B821A865CB0026945B /* TubersKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = C4C034B721A865CB0026945B /* TubersKeys.h */; };
 		C4DA751F21BBB79D00795A2B /* FirstViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DA751E21BBB79D00795A2B /* FirstViewPresenter.swift */; };
@@ -53,15 +51,12 @@
 
 /* Begin PBXFileReference section */
 		0630E74F53D620EC37A0B099 /* Pods-TubersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubersTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TubersTests/Pods-TubersTests.debug.xcconfig"; sourceTree = "<group>"; };
-		0EA2A888C37A9F8057250480 /* Pods_Tubers_TubersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tubers_TubersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26AC826E70916A7C7D2C2357 /* Pods-Tubers-TubersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tubers-TubersTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tubers-TubersTests/Pods-Tubers-TubersTests.release.xcconfig"; sourceTree = "<group>"; };
 		52362DF68AF545C6266403C5 /* Pods-TubersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubersUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TubersUITests/Pods-TubersUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		53D7A99AF37CDA453177C7D8 /* Pods-TubersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubersUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TubersUITests/Pods-TubersUITests.release.xcconfig"; sourceTree = "<group>"; };
 		60BAAC9C0D0064C13FC79DF0 /* Pods-Tubers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tubers.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tubers/Pods-Tubers.release.xcconfig"; sourceTree = "<group>"; };
 		862DC446D52A28B031243280 /* Pods-Tubers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tubers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tubers/Pods-Tubers.debug.xcconfig"; sourceTree = "<group>"; };
 		90806C02226B86110023FEC4 /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
-		AE58787D42811A60D16CBADA /* Pods_Tubers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tubers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD9DC4B2F8A435A20B4712BB /* Pods_TubersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TubersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C413CCDB21BC1976003F4728 /* YoutuberListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutuberListTableViewCell.swift; sourceTree = "<group>"; };
 		C413CCDC21BC1976003F4728 /* YoutuberListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YoutuberListTableViewCell.xib; sourceTree = "<group>"; };
 		C4894AC621B1791D00DCE9E9 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -91,7 +86,6 @@
 		C4F5F63721A83431003ECD04 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		E76EE49CD8D4B1E5A29C75B0 /* Pods-Tubers-TubersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tubers-TubersTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tubers-TubersTests/Pods-Tubers-TubersTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F022B890C554B0432F6FF12B /* Pods-TubersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubersTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TubersTests/Pods-TubersTests.release.xcconfig"; sourceTree = "<group>"; };
-		F0EF526D2B4A5A01871F6301 /* Pods_TubersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TubersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +93,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B91C7E56645CBA9448C96298 /* Pods_Tubers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,8 +100,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF1DEC02B65797BC6D31A95A /* Pods_TubersTests.framework in Frameworks */,
-				77AD7889961AC174CE11E03C /* Pods_Tubers_TubersTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,7 +107,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87661FA0E63AB9A8A87D35C3 /* Pods_TubersUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,10 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				C4C034B021A85CA80026945B /* Bridging-Header.h */,
-				AE58787D42811A60D16CBADA /* Pods_Tubers.framework */,
-				BD9DC4B2F8A435A20B4712BB /* Pods_TubersTests.framework */,
-				F0EF526D2B4A5A01871F6301 /* Pods_TubersUITests.framework */,
-				0EA2A888C37A9F8057250480 /* Pods_Tubers_TubersTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -462,6 +448,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9010B8062283DC1900F7B5BD /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +456,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9010B8072283DC1C00F7B5BD /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,7 +608,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4B1E0E521A816DB00B94292 /* TubersTests.swift in Sources */,
+				9010B8052283DC0200F7B5BD /* TubersTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

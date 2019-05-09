@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (4.7.3)
-  - Keys (1.0.1)
+  - Keys (1.0.0)
   - Kingfisher (5.0.1)
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
@@ -37,7 +37,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
+  Keys: af65e23feef2a047b3277b1ef0399f1209ef9d46
   Kingfisher: 4f771421b9208185217550528a06fd48756cb7c2
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75

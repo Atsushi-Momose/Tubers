@@ -31,17 +31,20 @@ class FirstViewPresenter: NSObject {
     
     // Youtube一覧
     func getYoutubeList() {
-        
         let apiConstants = APIConstants()
-        
+        let youtubeAPIKey = String(TubersKeys().youtubeAPIKey())
         var url = String()
         
         if searchWord.count > 0 { // 検索
-            url = nextPageToken != "" ? apiConstants.searchChannelURL + searchWord + "&key=" + TubersKeys().youtubeAPIKey + "&pageToken=" + nextPageToken : apiConstants.searchChannelURL + searchWord + "&key=" + TubersKeys().youtubeAPIKey
+            if nextPageToken != "" {
+                url = apiConstants.searchChannelURL + searchWord + "&key=" + youtubeAPIKey + "&pageToken=" + nextPageToken
+                
+            } else {
+                url = apiConstants.searchChannelURL + searchWord + "&key=" + youtubeAPIKey
+            }
         } else { // 新着一覧
-            url = nextPageToken != "" ? apiConstants.youTubeListURL + TubersKeys().youtubeAPIKey + "&pageToken=" + nextPageToken : apiConstants.youTubeListURL + TubersKeys().youtubeAPIKey
+            url = nextPageToken != "" ? apiConstants.youTubeListURL + youtubeAPIKey + "&pageToken=" + nextPageToken : apiConstants.youTubeListURL + youtubeAPIKey
         }
-
         youtubeUseCase.loadYouTubeList(url: url)
         getSubscribe()
     }

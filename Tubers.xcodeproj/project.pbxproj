@@ -185,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				C4B1E0CF21A816D900B94292 /* AppDelegate.swift */,
-				C4B1E0D321A816D900B94292 /* Main.storyboard */,
 				C4DA751921BBB6AD00795A2B /* PresentationLayer */,
 				C4DA751B21BBB6CD00795A2B /* Presenter */,
 				C4DA751C21BBB6F700795A2B /* DomainLayer */,
@@ -228,9 +227,10 @@
 			isa = PBXGroup;
 			children = (
 				C4B1E0D121A816D900B94292 /* MainViewController.swift */,
+				C4B1E0D321A816D900B94292 /* Main.storyboard */,
+				C4DA751A21BBB6BF00795A2B /* YouTube */,
 				90DB92DE22896AC6001B1FA1 /* Twitter */,
 				90DB92DD22896ABD001B1FA1 /* Instagram */,
-				C4DA751A21BBB6BF00795A2B /* YouTube */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";

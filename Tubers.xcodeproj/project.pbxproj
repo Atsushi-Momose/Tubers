@@ -11,6 +11,7 @@
 		9010B8062283DC1900F7B5BD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4B1E0E621A816DB00B94292 /* Info.plist */; };
 		9010B8072283DC1C00F7B5BD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4B1E0F121A816DB00B94292 /* Info.plist */; };
 		90806C03226B86110023FEC4 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90806C02226B86110023FEC4 /* R.generated.swift */; };
+		90DB92DB22896A5A001B1FA1 /* YoutubeChannelModalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90DB92DA22896A5A001B1FA1 /* YoutubeChannelModalViewController.storyboard */; };
 		C413CCDD21BC1976003F4728 /* YoutuberListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413CCDB21BC1976003F4728 /* YoutuberListTableViewCell.swift */; };
 		C413CCDE21BC1976003F4728 /* YoutuberListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C413CCDC21BC1976003F4728 /* YoutuberListTableViewCell.xib */; };
 		C4894AC721B1791E00DCE9E9 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4894AC621B1791D00DCE9E9 /* R.generated.swift */; };
@@ -57,6 +58,7 @@
 		60BAAC9C0D0064C13FC79DF0 /* Pods-Tubers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tubers.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tubers/Pods-Tubers.release.xcconfig"; sourceTree = "<group>"; };
 		862DC446D52A28B031243280 /* Pods-Tubers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tubers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tubers/Pods-Tubers.debug.xcconfig"; sourceTree = "<group>"; };
 		90806C02226B86110023FEC4 /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		90DB92DA22896A5A001B1FA1 /* YoutubeChannelModalViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = YoutubeChannelModalViewController.storyboard; sourceTree = "<group>"; };
 		C413CCDB21BC1976003F4728 /* YoutuberListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutuberListTableViewCell.swift; sourceTree = "<group>"; };
 		C413CCDC21BC1976003F4728 /* YoutuberListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YoutuberListTableViewCell.xib; sourceTree = "<group>"; };
 		C4894AC621B1791D00DCE9E9 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -121,11 +123,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C413CCD421BC07C9003F4728 /* View */ = {
+		90DB92D822896979001B1FA1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C413CCDB21BC1976003F4728 /* YoutuberListTableViewCell.swift */,
+				C413CCDC21BC1976003F4728 /* YoutuberListTableViewCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		90DB92D9228969E5001B1FA1 /* ModalView */ = {
+			isa = PBXGroup;
+			children = (
+				90DB92DA22896A5A001B1FA1 /* YoutubeChannelModalViewController.storyboard */,
+			);
+			path = ModalView;
+			sourceTree = "<group>";
+		};
+		90DB92DD22896ABD001B1FA1 /* Instagram */ = {
+			isa = PBXGroup;
+			children = (
+				C4F5F63421A8243E003ECD04 /* ThirdViewController.swift */,
+			);
+			path = Instagram;
+			sourceTree = "<group>";
+		};
+		90DB92DE22896AC6001B1FA1 /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				C4F5F63221A823E0003ECD04 /* SecondViewController.swift */,
+			);
+			path = Twitter;
 			sourceTree = "<group>";
 		};
 		C4B1E0C321A816D800B94292 = {
@@ -199,23 +227,22 @@
 		C4DA751921BBB6AD00795A2B /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				C4DA751A21BBB6BF00795A2B /* ViewController */,
+				C4B1E0D121A816D900B94292 /* MainViewController.swift */,
+				90DB92DE22896AC6001B1FA1 /* Twitter */,
+				90DB92DD22896ABD001B1FA1 /* Instagram */,
+				C4DA751A21BBB6BF00795A2B /* YouTube */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
 		};
-		C4DA751A21BBB6BF00795A2B /* ViewController */ = {
+		C4DA751A21BBB6BF00795A2B /* YouTube */ = {
 			isa = PBXGroup;
 			children = (
-				C4B1E0D121A816D900B94292 /* MainViewController.swift */,
 				C4F5F63021A82251003ECD04 /* FirstViewController.swift */,
-				C413CCDB21BC1976003F4728 /* YoutuberListTableViewCell.swift */,
-				C4F5F63221A823E0003ECD04 /* SecondViewController.swift */,
-				C4F5F63421A8243E003ECD04 /* ThirdViewController.swift */,
-				C413CCD421BC07C9003F4728 /* View */,
-				C413CCDC21BC1976003F4728 /* YoutuberListTableViewCell.xib */,
+				90DB92D822896979001B1FA1 /* View */,
+				90DB92D9228969E5001B1FA1 /* ModalView */,
 			);
-			path = ViewController;
+			path = YouTube;
 			sourceTree = "<group>";
 		};
 		C4DA751B21BBB6CD00795A2B /* Presenter */ = {
@@ -440,6 +467,7 @@
 				C4B1E0DA21A816DA00B94292 /* LaunchScreen.storyboard in Resources */,
 				C413CCDE21BC1976003F4728 /* YoutuberListTableViewCell.xib in Resources */,
 				C4B1E0D721A816DA00B94292 /* Assets.xcassets in Resources */,
+				90DB92DB22896A5A001B1FA1 /* YoutubeChannelModalViewController.storyboard in Resources */,
 				C4B1E0D521A816D900B94292 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

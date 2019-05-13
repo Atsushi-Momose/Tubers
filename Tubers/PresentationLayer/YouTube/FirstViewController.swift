@@ -87,6 +87,12 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let eTag = youtubeList.items?[indexPath.row].etag else { return }
+        print(eTag)
+        
+    }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         // 一番下までスクロールした場合

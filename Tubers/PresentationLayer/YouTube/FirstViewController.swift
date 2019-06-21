@@ -37,7 +37,7 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
         youtubListTableView.register (UINib(nibName: "YoutuberListTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
         
         // Youtube一覧取得
-        presenter.getYoutubeList()
+        presenter.getYoutubeList(searchStatus: .newArrival)
         getSubscribe()
     }
     
@@ -99,7 +99,7 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
         if youtubListTableView.contentOffset.y + youtubListTableView.frame.size.height > youtubListTableView.contentSize.height && youtubListTableView.isDragging {
            
             if !isLoad {
-                presenter.getYoutubeList()
+                presenter.getYoutubeList(searchStatus: .textSearch)
                 isLoad = true
             }
         }

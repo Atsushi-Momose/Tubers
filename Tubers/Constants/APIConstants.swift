@@ -15,4 +15,8 @@ class APIConstants: NSObject {
     
     // channel検索
     let searchChannelURL = "https://www.googleapis.com/youtube/v3/search?type=video&part=snippet&maxResults=40&order=date&q="
+    
+    let searchVideoURL =
+        "https://www.googleapis.com/youtube/v3/videos?id="
+    
 }

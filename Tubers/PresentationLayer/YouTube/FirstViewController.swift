@@ -89,8 +89,9 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let eTag = youtubeList.items?[indexPath.row].etag else { return }
-        print(eTag)
-        
+        guard let channelID = youtubeList.items?[indexPath.row].snippet?.channelId else { return }
+        presenter.channelID = eTag
+        presenter.getYoutubeList(searchStatus: .channelSearch)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

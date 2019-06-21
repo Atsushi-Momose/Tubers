@@ -27,7 +27,7 @@ class FirstViewPresenter: NSObject {
     var youtubeList = YouTubeList()
     var nextPageToken = String()
     var searchWord = String()
-    var url = String()
+    var channelID = String()
     
     private let eventSubject = PublishSubject<Int>()
     var event: Observable<Int> { return eventSubject }
@@ -48,7 +48,7 @@ class FirstViewPresenter: NSObject {
                 url = apiConstants.searchChannelURL + searchWord + "&key=" + youtubeAPIKey
             }
         case .channelSearch:
-            url = self.url
+            url = apiConstants.searchVideoURL + self.channelID + "&key=" + youtubeAPIKey
         }
         youtubeUseCase.loadYouTubeList(url: url)
         getSubscribe()

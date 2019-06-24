@@ -16,7 +16,7 @@ import RxCocoa
  - Viewがどうなっているか知らない
  */
 
-enum searchStatus: Int {
+enum searchType: Int {
     case newArrival = 1// 新着
     case textSearch // 検索
     case channelSearch // 特定のチャンネル検索
@@ -33,22 +33,23 @@ class FirstViewPresenter: NSObject {
     var event: Observable<Int> { return eventSubject }
     
     // Youtube一覧
-    func getYoutubeList(searchStatus: searchStatus) {
+    func getYoutubeList(searchType: searchType) {
         let apiConstants = APIConstants()
         let youtubeAPIKey = String(TubersKeys().youtubeAPIKey())
         var url = String()
         
-        switch searchStatus {
+        switch searchType {
         case .newArrival:
             url = nextPageToken != "" ? apiConstants.youTubeListURL + youtubeAPIKey + "&pageToken=" + nextPageToken : apiConstants.youTubeListURL + youtubeAPIKey
         case .textSearch:
             if nextPageToken != "" {
-                url = apiConstants.searchChannelURL + searchWord + "&key=" + youtubeAPIKey + "&pageToken=" + nextPageToken
+                url = (String(format: apiConstants.searchChannelURL,searchWord, youtubeAPIKey)) + "&pageToken=" + nextPageToken
             } else {
-                url = apiConstants.searchChannelURL + searchWord + "&key=" + youtubeAPIKey
+                url = (String(format: apiConstants.searchChannelURL,searchWord, youtubeAPIKey))
+
             }
         case .channelSearch:
-            url = apiConstants.searchVideoURL + self.channelID + "&key=" + youtubeAPIKey
+            url = (String(format: apiConstants.searchChannelIDURL, self.channelID, youtubeAPIKey))
         }
         youtubeUseCase.loadYouTubeList(url: url)
         getSubscribe()
@@ -61,7 +62,7 @@ class FirstViewPresenter: NSObject {
         youtubeUseCase.isFirst = true
         
         // 検索実行
-        getYoutubeList(searchStatus: .textSearch)
+        getYoutubeList(searchType: .textSearch)
     }
     
     private func getSubscribe() {

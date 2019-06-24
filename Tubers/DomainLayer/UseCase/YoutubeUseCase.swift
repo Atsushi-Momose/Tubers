@@ -16,6 +16,12 @@ import RxCocoa
  - UIには直接関与しない(View,ViewControllerから直接参照されない)
 */
 
+enum searchType: Int {
+    case newArrival = 1// 新着
+    case textSearch // 検索
+    case channelSearch // 特定のチャンネル検索
+}
+
 class YoutubeUseCase {
     
     // Youtube一覧
@@ -27,8 +33,33 @@ class YoutubeUseCase {
     private let eventSubject = PublishSubject<Int>()
     var event: Observable<Int> { return eventSubject }
     
+    func xxx(searchType: searchType, searchWord: String, channelID: String) {
+        let apiConstants = APIConstants()
+        let youtubeAPIKey = String(TubersKeys().youtubeAPIKey())
+        let nextPageToken = self.youtubeList.nextPageToken
+        var searchURL = String()
+        
+        switch searchType {
+        case .newArrival:
+            if self.youtubeList.nextPageToken != nil && nextPageToken != "" {
+                searchURL = (String(format: apiConstants.youTubeListURL, youtubeAPIKey)) + "&pageToken=" + nextPageToken!
+            } else if self.youtubeList.nextPageToken == nil {
+                searchURL = (String(format: apiConstants.youTubeListURL, youtubeAPIKey))
+            }
+        case .textSearch:
+            if self.youtubeList.nextPageToken != nil && nextPageToken != "" {
+                searchURL = (String(format: apiConstants.searchChannelURL, searchWord, youtubeAPIKey)) + "&pageToken=" + nextPageToken!
+            } else if self.youtubeList.nextPageToken == nil {
+                searchURL = (String(format: apiConstants.searchChannelURL, searchWord, youtubeAPIKey))
+            }
+        case .channelSearch:
+            searchURL = (String(format: apiConstants.searchChannelIDURL, channelID, youtubeAPIKey))
+        }
+        self.loadYouTubeList(url: searchURL)
+    }
+    
     // 新着一覧
-    func loadYouTubeList(url: String) {
+    private func loadYouTubeList(url: String) {
         
         let apiManager = APIManager()
         

@@ -16,62 +16,43 @@ import RxCocoa
  - Viewがどうなっているか知らない
  */
 
-enum searchType: Int {
-    case newArrival = 1// 新着
-    case textSearch // 検索
-    case channelSearch // 特定のチャンネル検索
-}
-
 class FirstViewPresenter: NSObject {
     let youtubeUseCase = YoutubeUseCase()
-    var youtubeList = YouTubeList()
-    var nextPageToken = String()
+    var youtubeList = YouTubeList() // 新着/テキスト検索結果
     var searchWord = String()
     var channelID = String()
+    var channelIDSearchResult = YouTubeList() // チャンネルID検索結果
     
     private let eventSubject = PublishSubject<Int>()
     var event: Observable<Int> { return eventSubject }
     
     // Youtube一覧
     func getYoutubeList(searchType: searchType) {
-        let apiConstants = APIConstants()
-        let youtubeAPIKey = String(TubersKeys().youtubeAPIKey())
-        var url = String()
-        
-        switch searchType {
-        case .newArrival:
-            url = nextPageToken != "" ? apiConstants.youTubeListURL + youtubeAPIKey + "&pageToken=" + nextPageToken : apiConstants.youTubeListURL + youtubeAPIKey
-        case .textSearch:
-            if nextPageToken != "" {
-                url = (String(format: apiConstants.searchChannelURL,searchWord, youtubeAPIKey)) + "&pageToken=" + nextPageToken
-            } else {
-                url = (String(format: apiConstants.searchChannelURL,searchWord, youtubeAPIKey))
-
-            }
-        case .channelSearch:
-            url = (String(format: apiConstants.searchChannelIDURL, self.channelID, youtubeAPIKey))
-        }
-        youtubeUseCase.loadYouTubeList(url: url)
-        getSubscribe()
+        youtubeUseCase.xxx(searchType: searchType, searchWord: self.searchWord, channelID: self.channelID)
+        getSubscribe(searchType: searchType)
     }
     
     // 検索
     func searchChannel(word: String) {
         searchWord = word
-        nextPageToken = ""
+       // nextPageToken = ""
         youtubeUseCase.isFirst = true
         
         // 検索実行
         getYoutubeList(searchType: .textSearch)
     }
     
-    private func getSubscribe() {
+    private func getSubscribe(searchType: searchType) {
         let _ = youtubeUseCase.event.subscribe (
             // 通常イベント発生時の処理
             onNext: { value in
-                self.youtubeList = self.youtubeUseCase.youtubeList
-                self.nextPageToken = self.youtubeUseCase.youtubeList.nextPageToken!
-                self.eventSubject.onNext(1)
+                if searchType == .channelSearch { // チャンネルID検索結果
+                    self.channelIDSearchResult = self.youtubeUseCase.youtubeList
+                } else {
+                    self.youtubeList = self.youtubeUseCase.youtubeList // 新着/テキスト検索結果
+                   // self.nextPageToken = self.youtubeUseCase.youtubeList.nextPageToken!
+                    self.eventSubject.onNext(1)
+                }
         },
             onError: { error in
                 // エラー発生時の処理

@@ -97,9 +97,9 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let eTag = youtubeList.items?[indexPath.row].etag else { return }
+        guard let videoID = youtubeList.items?[indexPath.row].id?.videoId else { return }
         
-        self.showYoutubeModalViewController(channelInfo: eTag)
+        self.showYoutubeModalViewController(channelInfo: videoID)
 //        guard let channelID = youtubeList.items?[indexPath.row].snippet?.channelId else { return }
 //        presenter.channelID = channelID
 //        presenter.getYoutubeList(searchType: .channelSearch)

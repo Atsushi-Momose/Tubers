@@ -142,7 +142,12 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
         // 余分なスペースは除く
         let text = trim(string: searchTextField.text!)
 
-        if text.count == 0 { return }
+        if text.count == 0 {
+            presenter.initialize()
+            presenter.getYoutubeList(searchType: .newArrival)
+            getSubscribe()
+            return
+        }
         
         presenter.searchChannel(word: urlEncode(string: text))
     }

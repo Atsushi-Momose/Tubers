@@ -41,6 +41,18 @@ class FirstViewPresenter: NSObject {
         getYoutubeList(searchType: .textSearch)
     }
     
+    func initialize() { // メソッド名がイマイチ
+        self.youtubeList = YouTubeList()
+        self.searchWord = String()
+        self.channelID = String()
+        self.channelIDSearchResult = YouTubeList()
+        self.selectedSearchType = searchType(rawValue: 0)
+        
+        self.youtubeUseCase.isFirst = true
+        self.youtubeUseCase.youtubeList = YouTubeList()
+        self.youtubeUseCase.channelIDSearchResult = YouTubeList()
+    }
+    
     private func getSubscribe() {
         let _ = youtubeUseCase.event.subscribe (
             // 通常イベント発生時の処理
@@ -48,13 +60,13 @@ class FirstViewPresenter: NSObject {
                 switch self.selectedSearchType {
                 case .channelSearch?:
                     self.channelIDSearchResult = self.youtubeUseCase.channelIDSearchResult
-                    self.eventSubject.onNext(1)
                 case .newArrival?, .textSearch?:
                     self.youtubeList = self.youtubeUseCase.youtubeList // 新着/テキスト検索結果
-                    self.eventSubject.onNext(1)
                 case .none:
                     assertionFailure()
+                    return
                 }
+                self.eventSubject.onNext(1)
         },
             onError: { error in
                 // エラー発生時の処理

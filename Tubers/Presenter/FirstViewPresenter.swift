@@ -22,36 +22,38 @@ class FirstViewPresenter: NSObject {
     var searchWord = String()
     var channelID = String()
     var channelIDSearchResult = YouTubeList() // チャンネルID検索結果
+    var selectedSearchType = searchType(rawValue: 0)
     
     private let eventSubject = PublishSubject<Int>()
     var event: Observable<Int> { return eventSubject }
     
     // Youtube一覧
     func getYoutubeList(searchType: searchType) {
+        self.selectedSearchType = searchType
         youtubeUseCase.xxx(searchType: searchType, searchWord: self.searchWord, channelID: self.channelID)
-        getSubscribe(searchType: searchType)
+        getSubscribe()
     }
     
     // 検索
     func searchChannel(word: String) {
         searchWord = word
-       // nextPageToken = ""
         youtubeUseCase.isFirst = true
-        
-        // 検索実行
         getYoutubeList(searchType: .textSearch)
     }
     
-    private func getSubscribe(searchType: searchType) {
+    private func getSubscribe() {
         let _ = youtubeUseCase.event.subscribe (
             // 通常イベント発生時の処理
             onNext: { value in
-                if searchType == .channelSearch { // チャンネルID検索結果
-                    self.channelIDSearchResult = self.youtubeUseCase.youtubeList
-                } else {
-                    self.youtubeList = self.youtubeUseCase.youtubeList // 新着/テキスト検索結果
-                   // self.nextPageToken = self.youtubeUseCase.youtubeList.nextPageToken!
+                switch self.selectedSearchType {
+                case .channelSearch?:
+                    self.channelIDSearchResult = self.youtubeUseCase.channelIDSearchResult
                     self.eventSubject.onNext(1)
+                case .newArrival?, .textSearch?:
+                    self.youtubeList = self.youtubeUseCase.youtubeList // 新着/テキスト検索結果
+                    self.eventSubject.onNext(1)
+                case .none:
+                    assertionFailure()
                 }
         },
             onError: { error in

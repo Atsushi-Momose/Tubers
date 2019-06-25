@@ -13,25 +13,16 @@
         <!--Youtube Channel View Controller-->
         <scene sceneID="F06-k3-2f1">
             <objects>
-                <viewController id="tbc-8u-c1e" customClass="YoutubeChannelViewController" customModule="Tubers" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CRi-et-YbC">
+                <viewController storyboardIdentifier="channel" id="tbc-8u-c1e" customClass="YoutubeChannelViewController" customModule="Tubers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CRi-et-YbC" customClass="YTPlayerView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2E-ag-Lzm">
-                                <rect key="frame" x="0.0" y="84" width="414" height="728"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="G2E-ag-Lzm" firstAttribute="top" secondItem="0lm-uK-Eh7" secondAttribute="top" constant="40" id="Zfs-Uy-TgZ"/>
-                            <constraint firstItem="0lm-uK-Eh7" firstAttribute="bottom" secondItem="G2E-ag-Lzm" secondAttribute="bottom" constant="50" id="cHH-Ak-oc5"/>
-                            <constraint firstItem="0lm-uK-Eh7" firstAttribute="trailing" secondItem="G2E-ag-Lzm" secondAttribute="trailing" id="l5d-VL-xZ0"/>
-                            <constraint firstItem="G2E-ag-Lzm" firstAttribute="leading" secondItem="0lm-uK-Eh7" secondAttribute="leading" id="v4F-fQ-Wev"/>
-                        </constraints>
+                        <color key="backgroundColor" red="1" green="0.7746628662861027" blue="0.095312672906601392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="0lm-uK-Eh7"/>
                     </view>
+                    <connections>
+                        <outlet property="playerView" destination="CRi-et-YbC" id="vrD-6B-ANy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NgH-vi-THv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

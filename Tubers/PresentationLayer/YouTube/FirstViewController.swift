@@ -15,6 +15,8 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     
     let presenter = FirstViewPresenter()
     
+    let youtubeChannelViewController = YoutubeChannelViewController()
+    
     var youtubeList = YouTubeList() // youtube一覧
     
     let disposeBag = DisposeBag()
@@ -45,10 +47,17 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
         let _ = presenter.event.subscribe (
             // 通常イベント発生時の処理
             onNext: { value in
-                self.youtubeList = self.presenter.youtubeList
-                
-                self.youtubListTableView.reloadData()
-                self.isLoad = false
+                switch self.presenter.selectedSearchType {
+                case .channelSearch?:
+                    print("channelSearch")
+                    //self.showYoutubeModalViewController(channelInfo: self.presenter.channelIDSearchResult)
+                case .newArrival?, .textSearch?:
+                    self.youtubeList = self.presenter.youtubeList
+                    self.youtubListTableView.reloadData()
+                    self.isLoad = false
+                case .none:
+                    assertionFailure()
+                }
         },
             onError: { error in
                 // エラー発生時の処理
@@ -88,10 +97,12 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       // guard let eTag = youtubeList.items?[indexPath.row].etag else { return }
-        guard let channelID = youtubeList.items?[indexPath.row].snippet?.channelId else { return }
-        presenter.channelID = channelID
-        presenter.getYoutubeList(searchType: .channelSearch)
+        guard let eTag = youtubeList.items?[indexPath.row].etag else { return }
+        
+        self.showYoutubeModalViewController(channelInfo: eTag)
+//        guard let channelID = youtubeList.items?[indexPath.row].snippet?.channelId else { return }
+//        presenter.channelID = channelID
+//        presenter.getYoutubeList(searchType: .channelSearch)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -104,6 +115,18 @@ class FirstViewController: UIViewController, IndicatorInfoProvider, UITableViewD
                 isLoad = true
             }
         }
+    }
+    
+    func showYoutubeModalViewController(channelInfo: String) {
+        guard let vc = R.storyboard.youtubeChannelViewController().instantiateViewController(withIdentifier: "channel") as? YoutubeChannelViewController
+            else {
+            assertionFailure()
+            return
+        }
+        
+        vc.videoID = channelInfo
+        
+        self.present(vc, animated: true, completion: nil)
     }
     
     func trim(string: String) -> String {

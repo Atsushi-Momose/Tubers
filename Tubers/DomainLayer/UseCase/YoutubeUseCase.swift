@@ -26,6 +26,7 @@ class YoutubeUseCase {
     
     // Youtube一覧
     var youtubeList = YouTubeList()
+    var channelIDSearchResult = YouTubeList()
     
     // 初回取得
     var isFirst = true
@@ -55,11 +56,11 @@ class YoutubeUseCase {
         case .channelSearch:
             searchURL = (String(format: apiConstants.searchChannelIDURL, channelID, youtubeAPIKey))
         }
-        self.loadYouTubeList(url: searchURL)
+        self.loadYouTubeList(url: searchURL, searchType: searchType)
     }
     
     // 新着一覧
-    private func loadYouTubeList(url: String) {
+    private func loadYouTubeList(url: String, searchType: searchType) {
         
         let apiManager = APIManager()
         
@@ -72,19 +73,36 @@ class YoutubeUseCase {
                     self.youtubeList = try decoder.decode(YouTubeList.self, from: result)
                     self.isFirst = false
                 } else {
-                    // 2回目以降
-                    let list: YouTubeList = try decoder.decode(YouTubeList.self, from: result)
                     
-                    guard let appendItem = list.items, appendItem.count != 0 else {
-                        self.eventSubject.onCompleted()
-                        return
+                    switch searchType {
+                    case .channelSearch:
+                        self.channelIDSearchResult = try decoder.decode(YouTubeList.self, from: result)
+//                        let list: YouTubeList = try decoder.decode(YouTubeList.self, from: result)
+//
+//                        guard let appendItem = list.items, appendItem.count != 0 else {
+//                            self.eventSubject.onCompleted()
+//                            return
+//                        }
+//
+//                        // 続きを取得するためのトークンを設定
+//                        self.youtubeList.nextPageToken = list.nextPageToken
+//                        // youtubeListに追加
+//                        let _ = appendItem.map({ self.youtubeList.items?.append($0) })
+                    case .newArrival, .textSearch:
+                        // 2回目以降
+                        let list: YouTubeList = try decoder.decode(YouTubeList.self, from: result)
+                        
+                        guard let appendItem = list.items, appendItem.count != 0 else {
+                            self.eventSubject.onCompleted()
+                            return
+                        }
+                        
+                        // 続きを取得するためのトークンを設定
+                        self.youtubeList.nextPageToken = list.nextPageToken
+                        
+                        // youtubeListに追加
+                        let _ = appendItem.map({ self.youtubeList.items?.append($0) })
                     }
-                    
-                    // 続きを取得するためのトークンを設定
-                    self.youtubeList.nextPageToken = list.nextPageToken
-                    
-                    // youtubeListに追加
-                    let _ = appendItem.map({ self.youtubeList.items?.append($0) })
                 }
                 self.eventSubject.onNext(1)
             } catch {

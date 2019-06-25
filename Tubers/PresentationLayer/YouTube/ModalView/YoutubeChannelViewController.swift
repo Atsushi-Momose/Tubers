@@ -7,24 +7,51 @@
 //
 
 import UIKit
+import youtube_ios_player_helper
 
-class YoutubeChannelViewController: UIViewController {
-
+class YoutubeChannelViewController: UIViewController, YTPlayerViewDelegate {
+    
+    @IBOutlet var playerView: YTPlayerView!
+    
+    var videoID = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.playerView.delegate = self
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(false)
+        self.playerView.load(withVideoId: self.videoID)
     }
-    */
-
+    
+    func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
+        self.playerView.playVideo()
+    }
+    
+    func playerView(_ playerView: YTPlayerView, didChangeTo state: YTPlayerState) {
+        
+    }
+    
+    func playerView(_ playerView: YTPlayerView, didChangeTo quality: YTPlaybackQuality) {
+        
+    }
+    
+    func playerView(_ playerView: YTPlayerView, receivedError error: YTPlayerError) {
+        
+    }
+    
+    func playerView(_ playerView: YTPlayerView, didPlayTime playTime: Float) {
+        
+    }
+    
+    func playerViewPreferredWebViewBackgroundColor(_ playerView: YTPlayerView) -> UIColor {
+        return .black
+        
+    }
+    
+    func playerViewPreferredInitialLoading(_ playerView: YTPlayerView) -> UIView? {
+        return nil
+        
+    }
 }

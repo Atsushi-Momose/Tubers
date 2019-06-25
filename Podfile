@@ -10,6 +10,7 @@ target 'Tubers' do
    pod 'RxSwift'#,    '~> 4.1.1'
    pod 'RxCocoa'#,    '~> 4.1.1'
    pod 'Kingfisher'
+   pod "youtube-ios-player-helper", "~> 0.1.4"
 
   # Pods for Tubers
 

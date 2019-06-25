@@ -12,8 +12,9 @@
 		9010B8052283DC0200F7B5BD /* TubersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B1E0E421A816DB00B94292 /* TubersTests.swift */; };
 		9010B8062283DC1900F7B5BD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4B1E0E621A816DB00B94292 /* Info.plist */; };
 		9010B8072283DC1C00F7B5BD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4B1E0F121A816DB00B94292 /* Info.plist */; };
+		9030F7FD22C1ED2800D8B144 /* YoutubeChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030F7FC22C1ED2800D8B144 /* YoutubeChannelViewController.swift */; };
 		90806C03226B86110023FEC4 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90806C02226B86110023FEC4 /* R.generated.swift */; };
-		90DB92DB22896A5A001B1FA1 /* YoutubeChannelModalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90DB92DA22896A5A001B1FA1 /* YoutubeChannelModalViewController.storyboard */; };
+		90DB92DB22896A5A001B1FA1 /* YoutubeChannelViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90DB92DA22896A5A001B1FA1 /* YoutubeChannelViewController.storyboard */; };
 		A232EBC41BE24A5EEBD7BE9D /* Pods_Tubers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310A5CB90A6A8558769BBCEA /* Pods_Tubers.framework */; };
 		C413CCDD21BC1976003F4728 /* YoutuberListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C413CCDB21BC1976003F4728 /* YoutuberListTableViewCell.swift */; };
 		C413CCDE21BC1976003F4728 /* YoutuberListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C413CCDC21BC1976003F4728 /* YoutuberListTableViewCell.xib */; };
@@ -62,8 +63,9 @@
 		53D7A99AF37CDA453177C7D8 /* Pods-TubersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TubersUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TubersUITests/Pods-TubersUITests.release.xcconfig"; sourceTree = "<group>"; };
 		60BAAC9C0D0064C13FC79DF0 /* Pods-Tubers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tubers.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tubers/Pods-Tubers.release.xcconfig"; sourceTree = "<group>"; };
 		862DC446D52A28B031243280 /* Pods-Tubers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tubers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tubers/Pods-Tubers.debug.xcconfig"; sourceTree = "<group>"; };
+		9030F7FC22C1ED2800D8B144 /* YoutubeChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeChannelViewController.swift; sourceTree = "<group>"; };
 		90806C02226B86110023FEC4 /* R.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
-		90DB92DA22896A5A001B1FA1 /* YoutubeChannelModalViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = YoutubeChannelModalViewController.storyboard; sourceTree = "<group>"; };
+		90DB92DA22896A5A001B1FA1 /* YoutubeChannelViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = YoutubeChannelViewController.storyboard; sourceTree = "<group>"; };
 		C413CCDB21BC1976003F4728 /* YoutuberListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutuberListTableViewCell.swift; sourceTree = "<group>"; };
 		C413CCDC21BC1976003F4728 /* YoutuberListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YoutuberListTableViewCell.xib; sourceTree = "<group>"; };
 		C4894AC621B1791D00DCE9E9 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -147,7 +149,8 @@
 		90DB92D9228969E5001B1FA1 /* ModalView */ = {
 			isa = PBXGroup;
 			children = (
-				90DB92DA22896A5A001B1FA1 /* YoutubeChannelModalViewController.storyboard */,
+				90DB92DA22896A5A001B1FA1 /* YoutubeChannelViewController.storyboard */,
+				9030F7FC22C1ED2800D8B144 /* YoutubeChannelViewController.swift */,
 			);
 			path = ModalView;
 			sourceTree = "<group>";
@@ -479,7 +482,7 @@
 				C4B1E0DA21A816DA00B94292 /* LaunchScreen.storyboard in Resources */,
 				C413CCDE21BC1976003F4728 /* YoutuberListTableViewCell.xib in Resources */,
 				C4B1E0D721A816DA00B94292 /* Assets.xcassets in Resources */,
-				90DB92DB22896A5A001B1FA1 /* YoutubeChannelModalViewController.storyboard in Resources */,
+				90DB92DB22896A5A001B1FA1 /* YoutubeChannelViewController.storyboard in Resources */,
 				C4B1E0D521A816D900B94292 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -633,6 +636,7 @@
 				90806C03226B86110023FEC4 /* R.generated.swift in Sources */,
 				C4DA752621BBC17900795A2B /* YoutubeUseCase.swift in Sources */,
 				C4DA751F21BBB79D00795A2B /* FirstViewPresenter.swift in Sources */,
+				9030F7FD22C1ED2800D8B144 /* YoutubeChannelViewController.swift in Sources */,
 				C4DA752821BBC5A000795A2B /* YoutubeRepository.swift in Sources */,
 				C4894ACE21B1897E00DCE9E9 /* YouTubeList.swift in Sources */,
 				C4F5F63321A823E0003ECD04 /* SecondViewController.swift in Sources */,

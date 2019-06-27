@@ -10,8 +10,8 @@ import UIKit
 import youtube_ios_player_helper
 
 class YoutubeChannelViewController: UIViewController, YTPlayerViewDelegate {
-    
-    @IBOutlet var playerView: YTPlayerView!
+  
+    @IBOutlet weak var playerView: YTPlayerView!
     
     var videoID = String()
     

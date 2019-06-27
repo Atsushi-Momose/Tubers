@@ -14,14 +14,27 @@
         <scene sceneID="F06-k3-2f1">
             <objects>
                 <viewController storyboardIdentifier="channel" id="tbc-8u-c1e" customClass="YoutubeChannelViewController" customModule="Tubers" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CRi-et-YbC" customClass="YTPlayerView">
+                    <view key="view" contentMode="scaleToFill" id="CRi-et-YbC" userLabel="View" customClass="UIVew">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqT-4G-JZB" customClass="YTPlayerView">
+                                <rect key="frame" x="0.0" y="74" width="414" height="738"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.7746628662861027" blue="0.095312672906601392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="qqT-4G-JZB" firstAttribute="top" secondItem="0lm-uK-Eh7" secondAttribute="top" constant="30" id="6wG-ka-qBS"/>
+                            <constraint firstItem="0lm-uK-Eh7" firstAttribute="trailing" secondItem="qqT-4G-JZB" secondAttribute="trailing" id="E7H-Tf-FM8"/>
+                            <constraint firstItem="qqT-4G-JZB" firstAttribute="leading" secondItem="0lm-uK-Eh7" secondAttribute="leading" id="XjE-CN-Kwl"/>
+                            <constraint firstItem="0lm-uK-Eh7" firstAttribute="bottom" secondItem="qqT-4G-JZB" secondAttribute="bottom" constant="50" id="hSC-2T-Izv"/>
+                            <constraint firstItem="qqT-4G-JZB" firstAttribute="top" secondItem="0lm-uK-Eh7" secondAttribute="top" constant="30" id="opG-OZ-7Fh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0lm-uK-Eh7"/>
                     </view>
                     <connections>
-                        <outlet property="playerView" destination="CRi-et-YbC" id="vrD-6B-ANy"/>
+                        <outlet property="playerView" destination="qqT-4G-JZB" id="QrV-sz-aug"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NgH-vi-THv" userLabel="First Responder" sceneMemberID="firstResponder"/>
